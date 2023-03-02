@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>BigFoot Sightings | Home Page</title>
+{% endblock title %}
+
+
+
+
+{% block content %}
+
+    {% include 'first-index-div.html' %}
+
+
+    <div id="hr-sep"></div>
+
+    <p style="color: white; text-align: center;">Select a state to see more data</p>
+    {% include 'second-index-div.html' %}
+
+
+    <div id="hr-sep"></div>
+
+
+    {% include 'third-index-div.html' %}
+
+
+    <div id="hr-sep"></div>
+
+
+    <p class="footer-paragraph">
+        This website gets its data from data.world that is supplied by the 
+        <a href="https://www.bfro.net/">Bigfoot Field Researchers Organization</a> (BFRO). 
+
+    </p>
+
+
+
+
+
+{% endblock content %}
