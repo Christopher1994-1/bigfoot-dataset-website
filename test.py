@@ -73,11 +73,15 @@ for a, row in df_loc.iterrows():
     json_row = row.to_dict()
     json_rows.append(json_row)
 ref_number = int(str(json_rows[0]['number']).split('.')[0])
+float_ref_number = json_rows[0]['number']
 
 print(json_rows)
 print()
 print("=" * 25)
 print()
+
+
+
 
 
 
@@ -95,15 +99,19 @@ print("=" * 25)
 print()
 
 
-a = 2917
-
-df_time = bigfoot_locations[(bigfoot_locations['number'] == a)]
 
 
-# json_rows3 = []
-# for c, row3 in df_time.iterrows():
-#     json_row3 = row3.to_dict()
-#     json_rows3.append(json_row3)
 
 
-print(df_time)
+
+
+
+df_time = bigfoot_locations[(bigfoot_locations['number'] == float_ref_number)]
+
+
+json_rows3 = []
+for c, row3 in df_time.iterrows():
+    json_row3 = row3.to_dict()
+    json_rows3.append(json_row3)
+
+print(json_rows3)

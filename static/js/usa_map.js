@@ -1,7 +1,3 @@
-
-
-
-
 var ClickableMap = {};
   (function() {
     var version = '1.0.0';
