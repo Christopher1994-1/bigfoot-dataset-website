@@ -36,13 +36,16 @@ $body-background-color: #333;
         width: 50%;
         text-align: center;
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        margin-top: 8%;
 
 
-        p {
-            color: $text-color;
-            line-height: 30px;
+
+        .description {
+          color: white;
         }
+
+
     }
 
 
