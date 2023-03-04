@@ -10,14 +10,25 @@
 
 
 <div class="main-state-container">
+    <!-- Header of the container -->
     <div class="header-area">
         <img src="/static/images/state_images/{{ image }}" alt="" width="100" height="100">
         <div class="header-area-content">
-            {{ state }}
+            <h5>{{ state }}</h5>
             <div class="sep"></div>
-            {{ total_sightings }} total sightings
+        <h5>{{ total_sightings }} total sightings</h5>
         </div>
     </div>
+
+
+    <h5>Most Recent Reports</h5>
+
+    <!-- Do a for loop here -->
+    <ul>
+        <li><a href="#">{{ report_one_atag }} </a><span> ({{ report_one_class }}) </span> - {{ report_one_title }}</li>
+        <li><a href="#">{{ report_two_atag }} </a><span> ({{ report_two_class }}) </span> - {{ report_two_title }}</li>
+        <li><a href="#">{{ report_three_atag }} </a><span> ({{ report_three_class }}) </span> - {{ report_three_title }}</li>
+    </ul>
 
 </div>
 

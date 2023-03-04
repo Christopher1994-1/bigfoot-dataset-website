@@ -185,3 +185,56 @@ $body-background-color: #333;
     text-align: center;
     margin-bottom: 5%;
 }
+
+
+
+
+
+
+
+// CSS code for the clickable state pages
+.main-state-container {
+  width: 80%;
+  padding: 15px;
+  margin: auto;
+  margin-top: 2%;
+  color: $text-color;
+
+
+  // Header Area Container
+  .header-area {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+
+    // Content of the header area, ie state name and total sightings
+    .header-area-content {
+      margin-left: 10px;
+
+
+      // css for the separator
+      .sep {
+        border: 1px solid $text-color;
+        border-radius: 10px;
+      }
+
+    }
+  }
+
+
+  ul {
+    margin-top: 10px;
+
+    li {
+      margin-bottom: 10px;
+      span {
+        color: red;
+        font-weight: 500;
+      }
+
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+}

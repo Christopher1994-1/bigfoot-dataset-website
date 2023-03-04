@@ -164,4 +164,37 @@
   color: rgba(255, 255, 255, 0.712);
   text-align: center;
   margin-bottom: 5%;
+}
+
+.main-state-container {
+  width: 80%;
+  padding: 15px;
+  margin: auto;
+  margin-top: 2%;
+  color: rgba(255, 255, 255, 0.712);
+}
+.main-state-container .header-area {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.main-state-container .header-area .header-area-content {
+  margin-left: 10px;
+}
+.main-state-container .header-area .header-area-content .sep {
+  border: 1px solid rgba(255, 255, 255, 0.712);
+  border-radius: 10px;
+}
+.main-state-container ul {
+  margin-top: 10px;
+}
+.main-state-container ul li {
+  margin-bottom: 10px;
+}
+.main-state-container ul li span {
+  color: red;
+  font-weight: 500;
+}
+.main-state-container ul li a {
+  text-decoration: underline;
 }/*# sourceMappingURL=style.css.map */
