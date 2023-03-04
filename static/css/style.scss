@@ -1,6 +1,9 @@
 $border: 2px solid black;
 $text-color: rgba(255, 255, 255, 0.712);
 $body-background-color: #333;
+$background-color: #292929;
+$font-color: #fff;
+$highlight-color: #8d99ae;
 
 
 // main css code for the hr/div separator
@@ -234,6 +237,51 @@ $body-background-color: #333;
 
       a {
         text-decoration: underline;
+      }
+    }
+  }
+
+
+
+
+  .county-table {
+    margin: 50px auto;
+    max-width: 80%;
+    background-color: $background-color;
+    color: $text-color;
+    border-radius: 10px;
+    overflow: auto;
+    max-height: 400px;
+    padding: 30px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+  
+    table {
+      width: 100%;
+      border-collapse: collapse;
+  
+      th {
+        font-weight: bold;
+        color: $text-color;
+        text-align: center;
+        border-bottom: 2px solid $highlight-color;
+        padding: 10px;
+      }
+  
+      td {
+        border-bottom: 1px solid $highlight-color;
+        padding: 10px;
+        color: $text-color;
+        text-align: center;
+  
+        &:nth-child(even) {
+          text-align: center;
+        }
+      }
+  
+      tr:hover {
+        background-color: darken($highlight-color, 10%);
+        cursor: pointer;
       }
     }
   }

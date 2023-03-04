@@ -7,6 +7,13 @@
 .navbar .navbar-logo {
   color: rgba(255, 255, 255, 0.712);
 }
+.navbar .navbar-logo a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.712);
+}
+.navbar .navbar-logo a:hover {
+  text-shadow: 5px 5px black;
+}
 .navbar .navbar-links {
   display: flex;
   width: 25%;

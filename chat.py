@@ -19,19 +19,15 @@ def getting_counties(state):
         json_rows.append(json_row)
 
     county_values = df_state['county'].value_counts()
-    counties = df_state['county']
-    
-    
-    new = {'count'}
+    counties = county_values.to_dict()
 
-    
-# TODO run this in git bash
+    return counties
    
 
     
     
 
-passing = 'nevada'
+passing = 'texas'
 
 getting_counties(passing)
 

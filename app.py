@@ -117,6 +117,25 @@ def getting_recent_reports(state):
     }
 
 
+
+def getting_counties(state):
+
+    bigfoot_geo_reports = pd.read_csv('bfro_reports_geocoded.csv')
+    
+    state = str(state).title()
+
+    df = bigfoot_geo_reports
+    df_state = df.loc[(bigfoot_geo_reports['state'] == state)]
+
+    json_rows = []
+    for a, row in df_state.iterrows():
+        json_row = row.to_dict()
+        json_rows.append(json_row)
+
+    county_values = df_state['county'].value_counts()
+    counties = county_values.to_dict()
+
+    return counties
     
 
 
@@ -137,6 +156,16 @@ def state_selection():
 
 
 
+@app.route('/county_selection')
+def county_selection():
+    selected_county = request.args.get('county')
+    # do something with the selected county
+    return render_template('county_selection.html',
+                           selected_county=selected_county,
+        )
+
+
+
 # =========================================================================================================== #
 # ============= State Routes ============= #
 
@@ -147,6 +176,7 @@ def texas():
     passing_variables = ["TX", "Texas", "texas.png"]
     
     return_recent_reports_dict = getting_recent_reports(passing_variables[1])
+    counties = getting_counties(passing_variables[1])
 
     report_one = return_recent_reports_dict['report_one']
     report_one_title = report_one['title1']
@@ -186,6 +216,10 @@ def texas():
                            report_three_title=report_three_title,
                            report_three_atag=report_three_atag,
                            report_three_class=report_three_class,
+                           
+                           
+                           # County Dict
+                           counties=counties,
 )
 
 

@@ -13,6 +13,15 @@ $text-color: rgba(255, 255, 255, 0.712);
     // main navbar logo container
     .navbar-logo {
         color: $text-color;
+
+        a {
+            text-decoration: none;
+            color: $text-color;
+        }
+
+        a:hover {
+            text-shadow: 5px 5px black;
+        }
     }
 
 

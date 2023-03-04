@@ -197,4 +197,40 @@
 }
 .main-state-container ul li a {
   text-decoration: underline;
+}
+.main-state-container .county-table {
+  margin: 50px auto;
+  max-width: 80%;
+  background-color: #292929;
+  color: rgba(255, 255, 255, 0.712);
+  border-radius: 10px;
+  overflow: auto;
+  max-height: 400px;
+  padding: 30px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  font-family: Arial, sans-serif;
+}
+.main-state-container .county-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.main-state-container .county-table table th {
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.712);
+  text-align: center;
+  border-bottom: 2px solid #8d99ae;
+  padding: 10px;
+}
+.main-state-container .county-table table td {
+  border-bottom: 1px solid #8d99ae;
+  padding: 10px;
+  color: rgba(255, 255, 255, 0.712);
+  text-align: center;
+}
+.main-state-container .county-table table td:nth-child(even) {
+  text-align: center;
+}
+.main-state-container .county-table table tr:hover {
+  background-color: #6f7e99;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

@@ -30,7 +30,29 @@
         <li><a href="#">{{ report_three_atag }} </a><span> ({{ report_three_class }}) </span> - {{ report_three_title }}</li>
     </ul>
 
-</div>
+    <div class="county-table">
+        <table>
+          <thead>
+            <tr>
+              <th>County</th>
+              <th># of sightings</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for county, sighting in counties.items() %}
+            <tr onclick="selected('{{ county }}')">
+              <td>{{ county }}</td>
+              <td>{{ sighting }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      
+      
 
+
+<script src="/static/js/county_select.js"></script>
+      
 
 {% endblock content %}
