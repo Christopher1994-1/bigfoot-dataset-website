@@ -7,6 +7,28 @@
 
 {% block content %}
 
+<div class="main-state-container">
+    <!-- Header of the container -->
+    <div class="header-area">
+        <img src="/static/images/state_images/{{ image }}" alt="" width="100" height="100">
+        <div class="header-area-content">
+            <h5>{{ state.title() }}</h5>
+            <div class="sep"></div>
+        <h5>{{ total_sightings }} total sightings</h5>
+        </div>
+    </div>
+
+
+    <h5>Most Recent Reports in {{ selected_county }}</h5>
+
+    <!-- Do a for loop here -->
+    <ul>
+        {% for row in rows %}
+        <li><a href="#">{{ row['date'] }} </a><span> ({{ row['classification'] }}) </span> - {{ row['title'] }}</li>
+        {% endfor %}
+    </ul>
+
+</div>
 
 
 {% endblock content %}
