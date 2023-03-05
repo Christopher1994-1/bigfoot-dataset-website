@@ -285,4 +285,19 @@ $highlight-color: #8d99ae;
       }
     }
   }
+
+
+
+  ul input {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    color: rgb(41, 41, 206);
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  ul input:hover {
+    text-decoration: underline;
+    color: rgb(32, 32, 170);
+  }
 }

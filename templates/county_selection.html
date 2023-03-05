@@ -14,7 +14,7 @@
         <div class="header-area-content">
             <h5>{{ state.title() }}</h5>
             <div class="sep"></div>
-        <h5>{{ total_sightings }} total sightings</h5>
+        <h5>{{ length_of_rows }} Total Sightings</h5>
         </div>
     </div>
 
@@ -23,12 +23,17 @@
 
     <!-- Do a for loop here -->
     <ul>
+        <form action="/individual_case">
         {% for row in rows %}
-        <li><a href="#">{{ row['date'] }} </a><span> ({{ row['classification'] }}) </span> - {{ row['title'] }}</li>
+        <input type="checkbox" name="check" id="check" value="{{ row['number'] }}" style="display: none;">
+        <li><input type="submit" value="{{ row['date']}}" onclick="data()"><span>({{ row['classification'] }}) </span> - {{ row['title'] }}</li>
         {% endfor %}
+        </form>
     </ul>
 
 </div>
+<script src="/static/js/case_selected.js"></script>
+
 
 
 {% endblock content %}

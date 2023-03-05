@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect, jsonify
 import pandas as pd
 import math
+import json
 
 
 app = Flask(__name__)
@@ -8,6 +9,11 @@ app = Flask(__name__)
 bigfoot_locations = pd.read_csv('bfro_locations.csv')
 bigfoot_geo_reports = pd.read_csv('bfro_reports_geocoded.csv')
 bigfoot_reports = pd.read_csv('bfro_reports.csv')
+
+
+images = {
+    "texas":"texas.png",
+}
 
 
 # functions
@@ -171,7 +177,7 @@ def showing_reports(state, county):
     value = ''
     for d1 in json_rows:
         new_dict = {}
-        for key in ('date', 'title', 'classification'):
+        for key in ('date', 'title', 'classification', 'number'):
             value = d1[key]
 
             new_dict[key] = value
@@ -188,8 +194,8 @@ def showing_reports(state, county):
     title_list = []
     for dic in sorted_cleaned_list:
         title_dict = {}
-        for key in ('date', 'title', 'classification'):
-            title = dic[key]
+        for key in ('date', 'title', 'classification', 'number'):
+            title = str(dic[key])
             if ":" in title:
                 new_title = str(title).split(":")
                 main_title = new_title[1].strip()
@@ -199,11 +205,12 @@ def showing_reports(state, county):
         title_list.append(title_dict)
         
     
+    
     date_list = []
     for tim in title_list:
         last_dict = {}
-        for key in ('date', 'title', 'classification'):
-            date = tim[key]
+        for key in ('date', 'title', 'classification', 'number'):
+            date = str(tim[key])
             if '-' in date and len(date) == 10:
                 date_split = str(date).split('-')
                 YEAR = date_split[0]
@@ -215,6 +222,9 @@ def showing_reports(state, county):
         date_list.append(last_dict)
         
     return date_list
+    
+    
+    
 
 
 # Home Page
@@ -238,14 +248,31 @@ state_selected = []
 def county_selection():
     selected_county = request.args.get('county')
     state = state_selected[0]
+    image = images[state]
     # do something with the selected county
     rows = showing_reports(state, selected_county)
+    length_of_rows = len(rows)
     return render_template('county_selection.html',
                            selected_county=selected_county,
                            state=state,
                            rows=rows,
+                           image=image,
+                           length_of_rows=length_of_rows,
         )
 
+
+@app.route('/individual_case', methods=["POST", "GET"])
+def individual_case():
+    value = ''
+    if request.method == "POST":
+        if request.content_type == 'application/json':
+            value = request.json.get('text')
+            print(value)
+        else:
+            value = request.form.get('text')
+            print(value)
+
+    return render_template('individual_case.html', value=value)
 
 
 # =========================================================================================================== #

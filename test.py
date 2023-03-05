@@ -43,7 +43,9 @@ bigfoot_geo_reports = pd.read_csv('bfro_reports_geocoded.csv')
 # location
 
 
-df = bigfoot_geo_reports['county'].describe()
+df = bigfoot_geo_reports['number'].describe()
+
+
 
 print(df)
 

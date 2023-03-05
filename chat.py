@@ -37,7 +37,7 @@ def showing_reports(state, county):
     value = ''
     for d1 in json_rows:
         new_dict = {}
-        for key in ('date', 'title', 'classification'):
+        for key in ('date', 'title', 'classification', 'number'):
             value = d1[key]
 
             new_dict[key] = value
@@ -54,8 +54,8 @@ def showing_reports(state, county):
     title_list = []
     for dic in sorted_cleaned_list:
         title_dict = {}
-        for key in ('date', 'title', 'classification'):
-            title = dic[key]
+        for key in ('date', 'title', 'classification', 'number'):
+            title = str(dic[key])
             if ":" in title:
                 new_title = str(title).split(":")
                 main_title = new_title[1].strip()
@@ -65,11 +65,12 @@ def showing_reports(state, county):
         title_list.append(title_dict)
         
     
+    
     date_list = []
     for tim in title_list:
         last_dict = {}
-        for key in ('date', 'title', 'classification'):
-            date = tim[key]
+        for key in ('date', 'title', 'classification', 'number'):
+            date = str(tim[key])
             if '-' in date and len(date) == 10:
                 date_split = str(date).split('-')
                 YEAR = date_split[0]
@@ -93,6 +94,9 @@ passing = 'texas'
 co = "Montgomery County"
 
 a = showing_reports(passing, co)
+print(a)
+
+
 
 
 

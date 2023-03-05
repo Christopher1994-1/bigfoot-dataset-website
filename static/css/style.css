@@ -233,4 +233,15 @@
 .main-state-container .county-table table tr:hover {
   background-color: #6f7e99;
   cursor: pointer;
+}
+.main-state-container ul input {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  color: rgb(41, 41, 206);
+  font-weight: bold;
+  cursor: pointer;
+}
+.main-state-container ul input:hover {
+  text-decoration: underline;
+  color: rgb(32, 32, 170);
 }/*# sourceMappingURL=style.css.map */
