@@ -204,6 +204,16 @@ $highlight-color: #8d99ae;
   color: $text-color;
 
 
+  // css for the separator
+  .sep {
+    border: 1px solid $text-color;
+    border-radius: 10px;
+    width: 80%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+
   // Header Area Container
   .header-area {
     display: flex;
@@ -299,5 +309,22 @@ $highlight-color: #8d99ae;
   ul input:hover {
     text-decoration: underline;
     color: rgb(32, 32, 170);
+  }
+}
+
+
+
+.individual_case {
+  padding:10px;
+
+  #span1 {
+    color: red;
+  }
+
+  #span2 {
+    font-size: 19px;
+    font-weight: lighter;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgba(255, 255, 255, 0.582);;
   }
 }

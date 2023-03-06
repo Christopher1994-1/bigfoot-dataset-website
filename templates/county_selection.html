@@ -19,14 +19,13 @@
     </div>
 
 
-    <h5>Most Recent Reports in {{ selected_county }}</h5>
+    <h5>Most Recent Reports in {{ selected_county }}, {{ state.title() }}</h5>
 
     <!-- Do a for loop here -->
     <ul>
         <form action="/individual_case">
         {% for row in rows %}
-        <input type="checkbox" name="check" id="check" value="{{ row['number'] }}" style="display: none;">
-        <li><input type="submit" value="{{ row['date']}}" onclick="data()"><span>({{ row['classification'] }}) </span> - {{ row['title'] }}</li>
+        <li><input type="submit" value="{{ row['date']}}"><span>({{ row['classification'] }}) </span> - {{ row['title'] }} <small id="id_number" style="visibility: hidden;">{{ row['number' ]}}</small></li>
         {% endfor %}
         </form>
     </ul>

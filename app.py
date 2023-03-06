@@ -18,7 +18,7 @@ images = {
 
 # functions
 
-
+# function that gets the 3 most recent sightings from whatever state that is selected
 def getting_recent_reports(state):
     months = {
         "01":"January",
@@ -132,7 +132,7 @@ def getting_counties(state):
     state = str(state).title()
 
     df = bigfoot_geo_reports
-    df_state = df.loc[(bigfoot_geo_reports['state'] == state)]
+    df_state = df.loc[(bigfoot_geo_reports['state'] == state) & (bigfoot_geo_reports['date'].isna() == False)]
 
     json_rows = []
     for a, row in df_state.iterrows():
@@ -225,11 +225,38 @@ def showing_reports(state, county):
     
     
     
+def one_case(state, county, id_number):
+
+    bigfoot_geo_reports = pd.read_csv('bfro_reports_geocoded.csv')
+    
+    state = str(state).title()
+    id_number = float(id_number)
+
+    df = bigfoot_geo_reports
+    df_state = df.loc[(bigfoot_geo_reports['state'] == state) & (bigfoot_geo_reports['county'] == county) & (bigfoot_geo_reports['number'] == id_number)]
+
+    json_rows = []
+    for a, row in df_state.iterrows():
+        json_row = row.to_dict()
+        json_rows.append(json_row)
+        
+
+        
+    return json_rows
+
+state_selected = [1]
+value_get = [1]
+county_selected = [1]
+
+
 
 
 # Home Page
 @app.route('/', methods=["GET", "POST"])
 def index():
+    # state_selected.clear()
+    # county_selected.clear()
+    # value_get.clear()
     return render_template('index.html')
 
 
@@ -241,14 +268,40 @@ def state_selection():
     return render_template('/routes/state_selection.html')
 
 
-state_selected = []
 
 
-@app.route('/county_selection')
+# backend function that gets the id_number from selecting county
+@app.route('/get_id_number', methods=["POST"])
+def id_number():
+    if request.content_type == 'application/json':
+        value = request.json.get('text')
+        print(value)
+        
+        result = "okay"
+    return jsonify({'result': result})
+        
+
+
+
+
+
+
+
+
+
+
+
+
+@app.route('/county_selection', methods=["POST", "GET"])
 def county_selection():
     selected_county = request.args.get('county')
+    county_selected.append(selected_county)
     state = state_selected[0]
     image = images[state]
+    if request.method == "POST":
+        value = request.form.get('id_number')
+        value_get.append(value)
+            
     # do something with the selected county
     rows = showing_reports(state, selected_county)
     length_of_rows = len(rows)
@@ -261,18 +314,14 @@ def county_selection():
         )
 
 
-@app.route('/individual_case', methods=["POST", "GET"])
-def individual_case():
-    value = ''
-    if request.method == "POST":
-        if request.content_type == 'application/json':
-            value = request.json.get('text')
-            print(value)
-        else:
-            value = request.form.get('text')
-            print(value)
 
-    return render_template('individual_case.html', value=value)
+
+
+
+@app.route('/individual_case')
+def individual_case():
+    print(value_get)
+    return render_template('individual_case.html')
 
 
 # =========================================================================================================== #

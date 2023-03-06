@@ -173,6 +173,13 @@
   margin-top: 2%;
   color: rgba(255, 255, 255, 0.712);
 }
+.main-state-container .sep {
+  border: 1px solid rgba(255, 255, 255, 0.712);
+  border-radius: 10px;
+  width: 80%;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
 .main-state-container .header-area {
   display: flex;
   align-items: center;
@@ -244,4 +251,17 @@
 .main-state-container ul input:hover {
   text-decoration: underline;
   color: rgb(32, 32, 170);
+}
+
+.individual_case {
+  padding: 10px;
+}
+.individual_case #span1 {
+  color: red;
+}
+.individual_case #span2 {
+  font-size: 19px;
+  font-weight: lighter;
+  font-family: "Times New Roman", Times, serif;
+  color: rgba(255, 255, 255, 0.582);
 }/*# sourceMappingURL=style.css.map */
