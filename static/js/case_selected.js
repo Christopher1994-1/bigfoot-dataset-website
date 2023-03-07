@@ -1,18 +1,20 @@
-function data() {
-  const store_value = [];
+document.getElementById('my-form').addEventListener('click', function(event) {
+  // only handle clicks on submit buttons
+  if (event.target.tagName.toLowerCase() === 'input' && event.target.type === 'submit') {
 
-  // Get the input value
-  const input = document.getElementById("id_number").innerHTML;
+    // get the value of the corresponding "number" input field
+    var numberInput = event.target.parentNode.querySelector('#number');
+    var numberValue = numberInput.innerHTML.trim();
 
-  if (store_value.length === 0) {
-    // Store the input value in the array if it doesn't have any other value
-    store_value.push(input);
-
-    // Send the input to the backend without waiting for a response
-    fetch("/get_id_number", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ text: input }),
-    });
+    fetch('/my-endpoint', {
+      method: 'POST',
+      body: JSON.stringify({ data: numberValue }),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error(error));
   }
-}
+});

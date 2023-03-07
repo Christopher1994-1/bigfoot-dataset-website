@@ -47,9 +47,6 @@ df = bigfoot_geo_reports['number'].describe()
 
 
 
-print(df)
-
-
 bigfoot_reports = pd.read_csv('bfro_reports.csv')
 # year
 # season

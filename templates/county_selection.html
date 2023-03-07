@@ -21,12 +21,11 @@
 
     <h5>Most Recent Reports in {{ selected_county }}, {{ state.title() }}</h5>
 
-    <!-- Do a for loop here -->
     <ul>
-        <form action="/individual_case">
-        {% for row in rows %}
-        <li><input type="submit" value="{{ row['date']}}"><span>({{ row['classification'] }}) </span> - {{ row['title'] }} <small id="id_number" style="visibility: hidden;">{{ row['number' ]}}</small></li>
-        {% endfor %}
+        <form action="/individual_case" id="my-form">
+            {% for row in rows%}
+            <li><input type="submit" name="submit" id="submit" value="{{ row['date'] }}"> <span>({{ row['classification'] }})</span>  - {{ row['title'] }} <small id="number" style="visibility: hidden;">{{ row['number']}}</small></li>
+            {% endfor %}
         </form>
     </ul>
 

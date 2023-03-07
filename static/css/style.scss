@@ -173,6 +173,16 @@ $highlight-color: #8d99ae;
 
         .states {
             border: $border;
+
+
+            h1 {
+              margin-bottom: 0;
+            }
+
+            small {
+              margin-top: 0;
+              color: $text-color;
+            }
         }
     }
 }

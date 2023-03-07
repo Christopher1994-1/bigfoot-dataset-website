@@ -157,6 +157,13 @@
 .third-index-div-container .states-div .states {
   border: 2px solid black;
 }
+.third-index-div-container .states-div .states h1 {
+  margin-bottom: 0;
+}
+.third-index-div-container .states-div .states small {
+  margin-top: 0;
+  color: rgba(255, 255, 255, 0.712);
+}
 
 .footer-paragraph {
   width: 80%;
