@@ -124,7 +124,7 @@ def getting_recent_reports(state):
     }
 
 
-
+# function to get all of the counties
 def getting_counties(state):
 
     bigfoot_geo_reports = pd.read_csv('bfro_reports_geocoded.csv')
@@ -144,6 +144,7 @@ def getting_counties(state):
 
     return counties
     
+
 
 def showing_reports(state, county):
     months = {
@@ -225,6 +226,7 @@ def showing_reports(state, county):
     
     
     
+# function that gets the data for one case
 def one_case(state, county, id_number):
 
     bigfoot_geo_reports = pd.read_csv('bfro_reports_geocoded.csv')
@@ -255,8 +257,6 @@ def the_four_states():
     rates = df['state'].value_counts().to_dict()    
     
     return rates
-
-
 
 
 
@@ -613,7 +613,7 @@ def nevada():
     report_three_number = report_three['number']
 
     total_sightings = return_recent_reports_dict['total_sightings']
-    return render_template('/states/texas.html',
+    return render_template('/states/nevada.html',
                            state_code=passing_variables[0],
                            state=passing_variables[1],
                            image=passing_variables[2],
@@ -646,6 +646,133 @@ def nevada():
 
 
 
+
+@app.route('/west_virginia.html')
+def west_virginia():
+    value_get.clear()
+    state_selected.clear()
+    images_host.clear()
+    state_selected.append("west virginia")
+    passing_variables = ["WV", "West Virginia", "west-virginia.png"]
+    images_host.append('west-virginia.png')
+    
+    return_recent_reports_dict = getting_recent_reports(passing_variables[1])
+    counties = getting_counties(passing_variables[1])
+
+    report_one = return_recent_reports_dict['report_one']
+    report_one_title = report_one['title1']
+    report_one_atag = report_one['first_atag']
+    report_one_class = report_one['first_class']
+    report_one_number = report_one['number']
+
+    report_two = return_recent_reports_dict['report_two']
+    report_two_title = report_two['title2']
+    report_two_atag = report_two['second_atag']
+    report_two_class = report_two['second_class']
+    report_two_number = report_two['number']
+
+    report_three = return_recent_reports_dict['report_three']
+    report_three_title = report_three['title3']
+    report_three_atag = report_three['third_atag']
+    report_three_class = report_three['third_class']
+    report_three_number = report_three['number']
+
+    total_sightings = return_recent_reports_dict['total_sightings']
+    return render_template('/states/west_virginia.html',
+                           state_code=passing_variables[0],
+                           state=passing_variables[1],
+                           image=passing_variables[2],
+                           total_sightings=total_sightings,
+                           
+                           
+                           # First recent report varibales
+                           report_one_title=report_one_title,
+                           report_one_atag=report_one_atag,
+                           report_one_class=report_one_class,
+                           report_one_number=report_one_number,
+                           
+                           # Second recent report varibales
+                           report_two_title=report_two_title,
+                           report_two_atag=report_two_atag,
+                           report_two_class=report_two_class,
+                           report_two_number=report_two_number,
+                           
+                           
+                           # Third recent report varibales
+                           report_three_title=report_three_title,
+                           report_three_atag=report_three_atag,
+                           report_three_class=report_three_class,
+                           report_three_number=report_three_number,
+                           
+                           
+                           # County Dict
+                           counties=counties,
+)
+
+
+
+
+@app.route('/florida.html')
+def florida():
+    value_get.clear()
+    state_selected.clear()
+    images_host.clear()
+    state_selected.append("florida")
+    passing_variables = ["FL", "Florida", "florida.png"]
+    images_host.append('florida.png')
+    
+    return_recent_reports_dict = getting_recent_reports(passing_variables[1])
+    counties = getting_counties(passing_variables[1])
+
+    report_one = return_recent_reports_dict['report_one']
+    report_one_title = report_one['title1']
+    report_one_atag = report_one['first_atag']
+    report_one_class = report_one['first_class']
+    report_one_number = report_one['number']
+
+    report_two = return_recent_reports_dict['report_two']
+    report_two_title = report_two['title2']
+    report_two_atag = report_two['second_atag']
+    report_two_class = report_two['second_class']
+    report_two_number = report_two['number']
+
+    report_three = return_recent_reports_dict['report_three']
+    report_three_title = report_three['title3']
+    report_three_atag = report_three['third_atag']
+    report_three_class = report_three['third_class']
+    report_three_number = report_three['number']
+
+    total_sightings = return_recent_reports_dict['total_sightings']
+    return render_template('/states/florida.html',
+                           state_code=passing_variables[0],
+                           state=passing_variables[1],
+                           image=passing_variables[2],
+                           total_sightings=total_sightings,
+                           
+                           
+                           # First recent report varibales
+                           report_one_title=report_one_title,
+                           report_one_atag=report_one_atag,
+                           report_one_class=report_one_class,
+                           report_one_number=report_one_number,
+                           
+                           # Second recent report varibales
+                           report_two_title=report_two_title,
+                           report_two_atag=report_two_atag,
+                           report_two_class=report_two_class,
+                           report_two_number=report_two_number,
+                           
+                           
+                           # Third recent report varibales
+                           report_three_title=report_three_title,
+                           report_three_atag=report_three_atag,
+                           report_three_class=report_three_class,
+                           report_three_number=report_three_number,
+                           
+                           
+                           # County Dict
+                           counties=counties,
+)
 
 
 
