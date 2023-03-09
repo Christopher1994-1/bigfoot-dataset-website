@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Sightings in {{ state_code }} | State Page</title>
+{% endblock title %}
+
+
+
+{% block content %}
+
+
+<div class="main-state-container">
+    <!-- Header of the container -->
+    <div class="header-area">
+        <img src="/static/images/state_images/{{ image }}" alt="" width="100" height="100">
+        <div class="header-area-content">
+            <h5>{{ state }}</h5>
+            <div class="sep"></div>
+        <h5>{{ total_sightings }} total sightings</h5>
+        </div>
+    </div>
+
+
+    <h5>Most Recent Reports</h5>
+
+    <!-- Do a for loop here -->
+    <ul>
+        <li><a href="{{ url_for('individual_case') }}" onclick="recent_report_one()" id="repo-one">{{ report_one_atag }} </a><span> ({{ report_one_class }}) </span> - {{ report_one_title }} <small id="report_one_number" style="visibility: hidden;">{{ report_one_number }}</small></li>
+        <li><a href="{{ url_for('individual_case') }}" onclick="recent_report_two()" id="repo-two">{{ report_two_atag }} </a><span> ({{ report_two_class }}) </span> - {{ report_two_title }} <small id="report_two_number" style="visibility: hidden;">{{ report_two_number }}</small></li>
+        <li><a href="{{ url_for('individual_case') }}" onclick="recent_report_three()" id="repo-three">{{ report_three_atag }} </a><span> ({{ report_three_class }}) </span> - {{ report_three_title }} <small id="report_three_number" style="visibility: hidden;">{{ report_three_number }}</small></li>
+    </ul>
+
+    <div class="county-table">
+        <table>
+          <thead>
+            <tr>
+              <th>County</th>
+              <th># of sightings</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for county, sighting in counties.items() %}
+            <tr onclick="selected('{{ county }}')">
+              <td>{{ county }}</td>
+              <td>{{ sighting }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+</div>
+
+<script src="/static/js/county_select.js"></script>
+<script src="/static/js/recent_report_functions.js"></script>
+      
+
+{% endblock content %}

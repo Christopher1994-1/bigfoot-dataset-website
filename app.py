@@ -645,8 +645,7 @@ def nevada():
 )
 
 
-
-
+# West Virginia State Page
 @app.route('/west_virginia.html')
 def west_virginia():
     value_get.clear()
@@ -711,7 +710,7 @@ def west_virginia():
 
 
 
-
+# Florida State Page
 @app.route('/florida.html')
 def florida():
     value_get.clear()
@@ -773,6 +772,3008 @@ def florida():
                            # County Dict
                            counties=counties,
 )
+
+
+
+# Illnois State Page 
+@app.route('/illnois.html')
+def illnois():
+    value_get.clear()
+    state_selected.clear()
+    images_host.clear()
+    state_selected.append("illnois")
+    passing_variables = ["IL", "Illnois", "illnois.png"]
+    images_host.append('illnois.png')
+    
+    return_recent_reports_dict = getting_recent_reports(passing_variables[1])
+    counties = getting_counties(passing_variables[1])
+
+    report_one = return_recent_reports_dict['report_one']
+    report_one_title = report_one['title1']
+    report_one_atag = report_one['first_atag']
+    report_one_class = report_one['first_class']
+    report_one_number = report_one['number']
+
+    report_two = return_recent_reports_dict['report_two']
+    report_two_title = report_two['title2']
+    report_two_atag = report_two['second_atag']
+    report_two_class = report_two['second_class']
+    report_two_number = report_two['number']
+
+    report_three = return_recent_reports_dict['report_three']
+    report_three_title = report_three['title3']
+    report_three_atag = report_three['third_atag']
+    report_three_class = report_three['third_class']
+    report_three_number = report_three['number']
+
+    total_sightings = return_recent_reports_dict['total_sightings']
+    return render_template('/states/illnois.html',
+                           state_code=passing_variables[0],
+                           state=passing_variables[1],
+                           image=passing_variables[2],
+                           total_sightings=total_sightings,
+                           
+                           
+                           # First recent report varibales
+                           report_one_title=report_one_title,
+                           report_one_atag=report_one_atag,
+                           report_one_class=report_one_class,
+                           report_one_number=report_one_number,
+                           
+                           # Second recent report varibales
+                           report_two_title=report_two_title,
+                           report_two_atag=report_two_atag,
+                           report_two_class=report_two_class,
+                           report_two_number=report_two_number,
+                           
+                           
+                           # Third recent report varibales
+                           report_three_title=report_three_title,
+                           report_three_atag=report_three_atag,
+                           report_three_class=report_three_class,
+                           report_three_number=report_three_number,
+                           
+                           
+                           # County Dict
+                           counties=counties,
+)
+
+
+
+
+# Minnesota State Page 
+@app.route('/minnesota.html')
+def minnesota():
+    value_get.clear()
+    state_selected.clear()
+    images_host.clear()
+    state_selected.append("minnesota")
+    passing_variables = ["MN", "Minnesota", "minnesota.png"]
+    images_host.append('minnesota.png')
+    
+    return_recent_reports_dict = getting_recent_reports(passing_variables[1])
+    counties = getting_counties(passing_variables[1])
+
+    report_one = return_recent_reports_dict['report_one']
+    report_one_title = report_one['title1']
+    report_one_atag = report_one['first_atag']
+    report_one_class = report_one['first_class']
+    report_one_number = report_one['number']
+
+    report_two = return_recent_reports_dict['report_two']
+    report_two_title = report_two['title2']
+    report_two_atag = report_two['second_atag']
+    report_two_class = report_two['second_class']
+    report_two_number = report_two['number']
+
+    report_three = return_recent_reports_dict['report_three']
+    report_three_title = report_three['title3']
+    report_three_atag = report_three['third_atag']
+    report_three_class = report_three['third_class']
+    report_three_number = report_three['number']
+
+    total_sightings = return_recent_reports_dict['total_sightings']
+    return render_template('/states/minnesota.html',
+                           state_code=passing_variables[0],
+                           state=passing_variables[1],
+                           image=passing_variables[2],
+                           total_sightings=total_sightings,
+                           
+                           
+                           # First recent report varibales
+                           report_one_title=report_one_title,
+                           report_one_atag=report_one_atag,
+                           report_one_class=report_one_class,
+                           report_one_number=report_one_number,
+                           
+                           # Second recent report varibales
+                           report_two_title=report_two_title,
+                           report_two_atag=report_two_atag,
+                           report_two_class=report_two_class,
+                           report_two_number=report_two_number,
+                           
+                           
+                           # Third recent report varibales
+                           report_three_title=report_three_title,
+                           report_three_atag=report_three_atag,
+                           report_three_class=report_three_class,
+                           report_three_number=report_three_number,
+                           
+                           
+                           # County Dict
+                           counties=counties,
+)
+
+
+
+
+# Maryland State Page 
+@app.route('/maryland.html')
+def maryland():
+    value_get.clear()
+    state_selected.clear()
+    images_host.clear()
+    state_selected.append("maryland")
+    passing_variables = ["MD", "Maryland", "maryland.png"]
+    images_host.append('maryland.png')
+    
+    return_recent_reports_dict = getting_recent_reports(passing_variables[1])
+    counties = getting_counties(passing_variables[1])
+
+    report_one = return_recent_reports_dict['report_one']
+    report_one_title = report_one['title1']
+    report_one_atag = report_one['first_atag']
+    report_one_class = report_one['first_class']
+    report_one_number = report_one['number']
+
+    report_two = return_recent_reports_dict['report_two']
+    report_two_title = report_two['title2']
+    report_two_atag = report_two['second_atag']
+    report_two_class = report_two['second_class']
+    report_two_number = report_two['number']
+
+    report_three = return_recent_reports_dict['report_three']
+    report_three_title = report_three['title3']
+    report_three_atag = report_three['third_atag']
+    report_three_class = report_three['third_class']
+    report_three_number = report_three['number']
+
+    total_sightings = return_recent_reports_dict['total_sightings']
+    return render_template('/states/maryland.html',
+                           state_code=passing_variables[0],
+                           state=passing_variables[1],
+                           image=passing_variables[2],
+                           total_sightings=total_sightings,
+                           
+                           
+                           # First recent report varibales
+                           report_one_title=report_one_title,
+                           report_one_atag=report_one_atag,
+                           report_one_class=report_one_class,
+                           report_one_number=report_one_number,
+                           
+                           # Second recent report varibales
+                           report_two_title=report_two_title,
+                           report_two_atag=report_two_atag,
+                           report_two_class=report_two_class,
+                           report_two_number=report_two_number,
+                           
+                           
+                           # Third recent report varibales
+                           report_three_title=report_three_title,
+                           report_three_atag=report_three_atag,
+                           report_three_class=report_three_class,
+                           report_three_number=report_three_number,
+                           
+                           
+                           # County Dict
+                           counties=counties,
+)
+
+
+
+# Rhode Island State Page 
+@app.route('/rhode_island.html')
+def rhode_island():
+    value_get.clear()
+    state_selected.clear()
+    images_host.clear()
+    state_selected.append("rhode island")
+    passing_variables = ["RI", "Rhode Island", "rhode-island.png"]
+    images_host.append('rhode-island.png')
+    
+    return_recent_reports_dict = getting_recent_reports(passing_variables[1])
+    counties = getting_counties(passing_variables[1])
+
+    report_one = return_recent_reports_dict['report_one']
+    report_one_title = report_one['title1']
+    report_one_atag = report_one['first_atag']
+    report_one_class = report_one['first_class']
+    report_one_number = report_one['number']
+
+    report_two = return_recent_reports_dict['report_two']
+    report_two_title = report_two['title2']
+    report_two_atag = report_two['second_atag']
+    report_two_class = report_two['second_class']
+    report_two_number = report_two['number']
+
+    report_three = return_recent_reports_dict['report_three']
+    report_three_title = report_three['title3']
+    report_three_atag = report_three['third_atag']
+    report_three_class = report_three['third_class']
+    report_three_number = report_three['number']
+
+    total_sightings = return_recent_reports_dict['total_sightings']
+    return render_template('/states/rhode_island.html',
+                           state_code=passing_variables[0],
+                           state=passing_variables[1],
+                           image=passing_variables[2],
+                           total_sightings=total_sightings,
+                           
+                           
+                           # First recent report varibales
+                           report_one_title=report_one_title,
+                           report_one_atag=report_one_atag,
+                           report_one_class=report_one_class,
+                           report_one_number=report_one_number,
+                           
+                           # Second recent report varibales
+                           report_two_title=report_two_title,
+                           report_two_atag=report_two_atag,
+                           report_two_class=report_two_class,
+                           report_two_number=report_two_number,
+                           
+                           
+                           # Third recent report varibales
+                           report_three_title=report_three_title,
+                           report_three_atag=report_three_atag,
+                           report_three_class=report_three_class,
+                           report_three_number=report_three_number,
+                           
+                           
+                           # County Dict
+                           counties=counties,
+)
+
+
+
+
+# Idaho State Page 
+@app.route('/idaho.html')
+def idaho():
+    value_get.clear()
+    state_selected.clear()
+    images_host.clear()
+    state_selected.append("idaho")
+    passing_variables = ["ID", "Idaho", "idaho.png"]
+    images_host.append('idaho.png')
+    
+    return_recent_reports_dict = getting_recent_reports(passing_variables[1])
+    counties = getting_counties(passing_variables[1])
+
+    report_one = return_recent_reports_dict['report_one']
+    report_one_title = report_one['title1']
+    report_one_atag = report_one['first_atag']
+    report_one_class = report_one['first_class']
+    report_one_number = report_one['number']
+
+    report_two = return_recent_reports_dict['report_two']
+    report_two_title = report_two['title2']
+    report_two_atag = report_two['second_atag']
+    report_two_class = report_two['second_class']
+    report_two_number = report_two['number']
+
+    report_three = return_recent_reports_dict['report_three']
+    report_three_title = report_three['title3']
+    report_three_atag = report_three['third_atag']
+    report_three_class = report_three['third_class']
+    report_three_number = report_three['number']
+
+    total_sightings = return_recent_reports_dict['total_sightings']
+    return render_template('/states/idaho.html',
+                           state_code=passing_variables[0],
+                           state=passing_variables[1],
+                           image=passing_variables[2],
+                           total_sightings=total_sightings,
+                           
+                           
+                           # First recent report varibales
+                           report_one_title=report_one_title,
+                           report_one_atag=report_one_atag,
+                           report_one_class=report_one_class,
+                           report_one_number=report_one_number,
+                           
+                           # Second recent report varibales
+                           report_two_title=report_two_title,
+                           report_two_atag=report_two_atag,
+                           report_two_class=report_two_class,
+                           report_two_number=report_two_number,
+                           
+                           
+                           # Third recent report varibales
+                           report_three_title=report_three_title,
+                           report_three_atag=report_three_atag,
+                           report_three_class=report_three_class,
+                           report_three_number=report_three_number,
+                           
+                           
+                           # County Dict
+                           counties=counties,
+)
+
+
+
+
+# New Hampshire State Page 
+@app.route('/new_hampshire.html')
+def new_hampshire():
+    value_get.clear()
+    state_selected.clear()
+    images_host.clear()
+    state_selected.append("new hampshire") # lower case
+    passing_variables = ["NH", "New Hampshire", "new-hampshire.png"]
+    images_host.append('new-hampshire.png')
+    
+    return_recent_reports_dict = getting_recent_reports(passing_variables[1])
+    counties = getting_counties(passing_variables[1])
+
+    report_one = return_recent_reports_dict['report_one']
+    report_one_title = report_one['title1']
+    report_one_atag = report_one['first_atag']
+    report_one_class = report_one['first_class']
+    report_one_number = report_one['number']
+
+    report_two = return_recent_reports_dict['report_two']
+    report_two_title = report_two['title2']
+    report_two_atag = report_two['second_atag']
+    report_two_class = report_two['second_class']
+    report_two_number = report_two['number']
+
+    report_three = return_recent_reports_dict['report_three']
+    report_three_title = report_three['title3']
+    report_three_atag = report_three['third_atag']
+    report_three_class = report_three['third_class']
+    report_three_number = report_three['number']
+
+    total_sightings = return_recent_reports_dict['total_sightings']
+    return render_template('/states/new_hampshire.html',
+                           state_code=passing_variables[0],
+                           state=passing_variables[1],
+                           image=passing_variables[2],
+                           total_sightings=total_sightings,
+                           
+                           
+                           # First recent report varibales
+                           report_one_title=report_one_title,
+                           report_one_atag=report_one_atag,
+                           report_one_class=report_one_class,
+                           report_one_number=report_one_number,
+                           
+                           # Second recent report varibales
+                           report_two_title=report_two_title,
+                           report_two_atag=report_two_atag,
+                           report_two_class=report_two_class,
+                           report_two_number=report_two_number,
+                           
+                           
+                           # Third recent report varibales
+                           report_three_title=report_three_title,
+                           report_three_atag=report_three_atag,
+                           report_three_class=report_three_class,
+                           report_three_number=report_three_number,
+                           
+                           
+                           # County Dict
+                           counties=counties,
+)
+
+
+
+
+# North Carolina State Page 
+@app.route('/north_carolina.html')
+def north_carolina():
+    value_get.clear()
+    state_selected.clear()
+    images_host.clear()
+    state_selected.append("north carolina") # lower case
+    passing_variables = ["NC", "North Carolina", "north-carolina.png"]
+    images_host.append('north-carolina.png')
+    
+    return_recent_reports_dict = getting_recent_reports(passing_variables[1])
+    counties = getting_counties(passing_variables[1])
+
+    report_one = return_recent_reports_dict['report_one']
+    report_one_title = report_one['title1']
+    report_one_atag = report_one['first_atag']
+    report_one_class = report_one['first_class']
+    report_one_number = report_one['number']
+
+    report_two = return_recent_reports_dict['report_two']
+    report_two_title = report_two['title2']
+    report_two_atag = report_two['second_atag']
+    report_two_class = report_two['second_class']
+    report_two_number = report_two['number']
+
+    report_three = return_recent_reports_dict['report_three']
+    report_three_title = report_three['title3']
+    report_three_atag = report_three['third_atag']
+    report_three_class = report_three['third_class']
+    report_three_number = report_three['number']
+
+    total_sightings = return_recent_reports_dict['total_sightings']
+    return render_template('/states/north_carolina.html',
+                           state_code=passing_variables[0],
+                           state=passing_variables[1],
+                           image=passing_variables[2],
+                           total_sightings=total_sightings,
+                           
+                           
+                           # First recent report varibales
+                           report_one_title=report_one_title,
+                           report_one_atag=report_one_atag,
+                           report_one_class=report_one_class,
+                           report_one_number=report_one_number,
+                           
+                           # Second recent report varibales
+                           report_two_title=report_two_title,
+                           report_two_atag=report_two_atag,
+                           report_two_class=report_two_class,
+                           report_two_number=report_two_number,
+                           
+                           
+                           # Third recent report varibales
+                           report_three_title=report_three_title,
+                           report_three_atag=report_three_atag,
+                           report_three_class=report_three_class,
+                           report_three_number=report_three_number,
+                           
+                           
+                           # County Dict
+                           counties=counties,
+)
+
+
+
+
+# Vermont State Page 
+@app.route('/vermont.html')
+def vermont():
+    value_get.clear()
+    state_selected.clear()
+    images_host.clear()
+    state_selected.append("vermont") # lower case
+    passing_variables = ["VT", "Vermont", "vermont.png"]
+    images_host.append('vermont.png')
+    
+    return_recent_reports_dict = getting_recent_reports(passing_variables[1])
+    counties = getting_counties(passing_variables[1])
+
+    report_one = return_recent_reports_dict['report_one']
+    report_one_title = report_one['title1']
+    report_one_atag = report_one['first_atag']
+    report_one_class = report_one['first_class']
+    report_one_number = report_one['number']
+
+    report_two = return_recent_reports_dict['report_two']
+    report_two_title = report_two['title2']
+    report_two_atag = report_two['second_atag']
+    report_two_class = report_two['second_class']
+    report_two_number = report_two['number']
+
+    report_three = return_recent_reports_dict['report_three']
+    report_three_title = report_three['title3']
+    report_three_atag = report_three['third_atag']
+    report_three_class = report_three['third_class']
+    report_three_number = report_three['number']
+
+    total_sightings = return_recent_reports_dict['total_sightings']
+    return render_template('/states/vermont.html',
+                           state_code=passing_variables[0],
+                           state=passing_variables[1],
+                           image=passing_variables[2],
+                           total_sightings=total_sightings,
+                           
+                           
+                           # First recent report varibales
+                           report_one_title=report_one_title,
+                           report_one_atag=report_one_atag,
+                           report_one_class=report_one_class,
+                           report_one_number=report_one_number,
+                           
+                           # Second recent report varibales
+                           report_two_title=report_two_title,
+                           report_two_atag=report_two_atag,
+                           report_two_class=report_two_class,
+                           report_two_number=report_two_number,
+                           
+                           
+                           # Third recent report varibales
+                           report_three_title=report_three_title,
+                           report_three_atag=report_three_atag,
+                           report_three_class=report_three_class,
+                           report_three_number=report_three_number,
+                           
+                           
+                           # County Dict
+                           counties=counties,
+)
+
+
+
+
+# Connecticut State Page 
+@app.route('/connecticut.html')
+def connecticut():
+    value_get.clear()
+    state_selected.clear()
+    images_host.clear()
+    state_selected.append("connecticut") # lower case
+    passing_variables = ["CT", "Connecticut", "connecticut.png"]
+    images_host.append('connecticut.png')
+    
+    return_recent_reports_dict = getting_recent_reports(passing_variables[1])
+    counties = getting_counties(passing_variables[1])
+
+    report_one = return_recent_reports_dict['report_one']
+    report_one_title = report_one['title1']
+    report_one_atag = report_one['first_atag']
+    report_one_class = report_one['first_class']
+    report_one_number = report_one['number']
+
+    report_two = return_recent_reports_dict['report_two']
+    report_two_title = report_two['title2']
+    report_two_atag = report_two['second_atag']
+    report_two_class = report_two['second_class']
+    report_two_number = report_two['number']
+
+    report_three = return_recent_reports_dict['report_three']
+    report_three_title = report_three['title3']
+    report_three_atag = report_three['third_atag']
+    report_three_class = report_three['third_class']
+    report_three_number = report_three['number']
+
+    total_sightings = return_recent_reports_dict['total_sightings']
+    return render_template('/states/connecticut.html',
+                           state_code=passing_variables[0],
+                           state=passing_variables[1],
+                           image=passing_variables[2],
+                           total_sightings=total_sightings,
+                           
+                           
+                           # First recent report varibales
+                           report_one_title=report_one_title,
+                           report_one_atag=report_one_atag,
+                           report_one_class=report_one_class,
+                           report_one_number=report_one_number,
+                           
+                           # Second recent report varibales
+                           report_two_title=report_two_title,
+                           report_two_atag=report_two_atag,
+                           report_two_class=report_two_class,
+                           report_two_number=report_two_number,
+                           
+                           
+                           # Third recent report varibales
+                           report_three_title=report_three_title,
+                           report_three_atag=report_three_atag,
+                           report_three_class=report_three_class,
+                           report_three_number=report_three_number,
+                           
+                           
+                           # County Dict
+                           counties=counties,
+)
+
+
+
+# Delaware State Page 
+@app.route('/delaware.html')
+def delaware():
+    value_get.clear()
+    state_selected.clear()
+    images_host.clear()
+    state_selected.append("delaware") # lower case
+    passing_variables = ["DE", "Delaware", "delaware.png"]
+    images_host.append('delaware.png')
+    
+    return_recent_reports_dict = getting_recent_reports(passing_variables[1])
+    counties = getting_counties(passing_variables[1])
+
+    report_one = return_recent_reports_dict['report_one']
+    report_one_title = report_one['title1']
+    report_one_atag = report_one['first_atag']
+    report_one_class = report_one['first_class']
+    report_one_number = report_one['number']
+
+    report_two = return_recent_reports_dict['report_two']
+    report_two_title = report_two['title2']
+    report_two_atag = report_two['second_atag']
+    report_two_class = report_two['second_class']
+    report_two_number = report_two['number']
+
+    report_three = return_recent_reports_dict['report_three']
+    report_three_title = report_three['title3']
+    report_three_atag = report_three['third_atag']
+    report_three_class = report_three['third_class']
+    report_three_number = report_three['number']
+
+    total_sightings = return_recent_reports_dict['total_sightings']
+    return render_template('/states/delaware.html',
+                           state_code=passing_variables[0],
+                           state=passing_variables[1],
+                           image=passing_variables[2],
+                           total_sightings=total_sightings,
+                           
+                           
+                           # First recent report varibales
+                           report_one_title=report_one_title,
+                           report_one_atag=report_one_atag,
+                           report_one_class=report_one_class,
+                           report_one_number=report_one_number,
+                           
+                           # Second recent report varibales
+                           report_two_title=report_two_title,
+                           report_two_atag=report_two_atag,
+                           report_two_class=report_two_class,
+                           report_two_number=report_two_number,
+                           
+                           
+                           # Third recent report varibales
+                           report_three_title=report_three_title,
+                           report_three_atag=report_three_atag,
+                           report_three_class=report_three_class,
+                           report_three_number=report_three_number,
+                           
+                           
+                           # County Dict
+                           counties=counties,
+)
+
+
+
+
+# New Mexico State Page 
+@app.route('/new_mexico.html')
+def new_mexico():
+    value_get.clear()
+    state_selected.clear()
+    images_host.clear()
+    state_selected.append("new mexico") # lower case
+    passing_variables = ["NM", "New Mexico", "new-mexico.png"]
+    images_host.append('new-mexico.png')
+    
+    return_recent_reports_dict = getting_recent_reports(passing_variables[1])
+    counties = getting_counties(passing_variables[1])
+
+    report_one = return_recent_reports_dict['report_one']
+    report_one_title = report_one['title1']
+    report_one_atag = report_one['first_atag']
+    report_one_class = report_one['first_class']
+    report_one_number = report_one['number']
+
+    report_two = return_recent_reports_dict['report_two']
+    report_two_title = report_two['title2']
+    report_two_atag = report_two['second_atag']
+    report_two_class = report_two['second_class']
+    report_two_number = report_two['number']
+
+    report_three = return_recent_reports_dict['report_three']
+    report_three_title = report_three['title3']
+    report_three_atag = report_three['third_atag']
+    report_three_class = report_three['third_class']
+    report_three_number = report_three['number']
+
+    total_sightings = return_recent_reports_dict['total_sightings']
+    return render_template('/states/new_mexico.html',
+                           state_code=passing_variables[0],
+                           state=passing_variables[1],
+                           image=passing_variables[2],
+                           total_sightings=total_sightings,
+                           
+                           
+                           # First recent report varibales
+                           report_one_title=report_one_title,
+                           report_one_atag=report_one_atag,
+                           report_one_class=report_one_class,
+                           report_one_number=report_one_number,
+                           
+                           # Second recent report varibales
+                           report_two_title=report_two_title,
+                           report_two_atag=report_two_atag,
+                           report_two_class=report_two_class,
+                           report_two_number=report_two_number,
+                           
+                           
+                           # Third recent report varibales
+                           report_three_title=report_three_title,
+                           report_three_atag=report_three_atag,
+                           report_three_class=report_three_class,
+                           report_three_number=report_three_number,
+                           
+                           
+                           # County Dict
+                           counties=counties,
+)
+
+
+
+# California State Page 
+@app.route('/california.html')
+def california():
+    value_get.clear()
+    state_selected.clear()
+    images_host.clear()
+    state_selected.append("california") # lower case
+    passing_variables = ["CA", "California", "california.png"]
+    images_host.append('california.png')
+    
+    return_recent_reports_dict = getting_recent_reports(passing_variables[1])
+    counties = getting_counties(passing_variables[1])
+
+    report_one = return_recent_reports_dict['report_one']
+    report_one_title = report_one['title1']
+    report_one_atag = report_one['first_atag']
+    report_one_class = report_one['first_class']
+    report_one_number = report_one['number']
+
+    report_two = return_recent_reports_dict['report_two']
+    report_two_title = report_two['title2']
+    report_two_atag = report_two['second_atag']
+    report_two_class = report_two['second_class']
+    report_two_number = report_two['number']
+
+    report_three = return_recent_reports_dict['report_three']
+    report_three_title = report_three['title3']
+    report_three_atag = report_three['third_atag']
+    report_three_class = report_three['third_class']
+    report_three_number = report_three['number']
+
+    total_sightings = return_recent_reports_dict['total_sightings']
+    return render_template('/states/california.html',
+                           state_code=passing_variables[0],
+                           state=passing_variables[1],
+                           image=passing_variables[2],
+                           total_sightings=total_sightings,
+                           
+                           
+                           # First recent report varibales
+                           report_one_title=report_one_title,
+                           report_one_atag=report_one_atag,
+                           report_one_class=report_one_class,
+                           report_one_number=report_one_number,
+                           
+                           # Second recent report varibales
+                           report_two_title=report_two_title,
+                           report_two_atag=report_two_atag,
+                           report_two_class=report_two_class,
+                           report_two_number=report_two_number,
+                           
+                           
+                           # Third recent report varibales
+                           report_three_title=report_three_title,
+                           report_three_atag=report_three_atag,
+                           report_three_class=report_three_class,
+                           report_three_number=report_three_number,
+                           
+                           
+                           # County Dict
+                           counties=counties,
+)
+
+
+
+
+# New Jersey State Page 
+@app.route('/new_jersey.html')
+def new_jersey():
+    value_get.clear()
+    state_selected.clear()
+    images_host.clear()
+    state_selected.append("new jersey") # lower case
+    passing_variables = ["NJ", "New Jersey", "new-jersey.png"]
+    images_host.append('new-jersey.png')
+    
+    return_recent_reports_dict = getting_recent_reports(passing_variables[1])
+    counties = getting_counties(passing_variables[1])
+
+    report_one = return_recent_reports_dict['report_one']
+    report_one_title = report_one['title1']
+    report_one_atag = report_one['first_atag']
+    report_one_class = report_one['first_class']
+    report_one_number = report_one['number']
+
+    report_two = return_recent_reports_dict['report_two']
+    report_two_title = report_two['title2']
+    report_two_atag = report_two['second_atag']
+    report_two_class = report_two['second_class']
+    report_two_number = report_two['number']
+
+    report_three = return_recent_reports_dict['report_three']
+    report_three_title = report_three['title3']
+    report_three_atag = report_three['third_atag']
+    report_three_class = report_three['third_class']
+    report_three_number = report_three['number']
+
+    total_sightings = return_recent_reports_dict['total_sightings']
+    return render_template('/states/new_jersey.html',
+                           state_code=passing_variables[0],
+                           state=passing_variables[1],
+                           image=passing_variables[2],
+                           total_sightings=total_sightings,
+                           
+                           
+                           # First recent report varibales
+                           report_one_title=report_one_title,
+                           report_one_atag=report_one_atag,
+                           report_one_class=report_one_class,
+                           report_one_number=report_one_number,
+                           
+                           # Second recent report varibales
+                           report_two_title=report_two_title,
+                           report_two_atag=report_two_atag,
+                           report_two_class=report_two_class,
+                           report_two_number=report_two_number,
+                           
+                           
+                           # Third recent report varibales
+                           report_three_title=report_three_title,
+                           report_three_atag=report_three_atag,
+                           report_three_class=report_three_class,
+                           report_three_number=report_three_number,
+                           
+                           
+                           # County Dict
+                           counties=counties,
+)
+
+
+
+
+# Wisconsin State Page 
+@app.route('/wisconsin.html')
+def wisconsin():
+    value_get.clear()
+    state_selected.clear()
+    images_host.clear()
+    state_selected.append("wisconsin") # lower case
+    passing_variables = ["WI", "Wisconsin", "wisconsin.png"]
+    images_host.append('wisconsin.png')
+    
+    return_recent_reports_dict = getting_recent_reports(passing_variables[1])
+    counties = getting_counties(passing_variables[1])
+
+    report_one = return_recent_reports_dict['report_one']
+    report_one_title = report_one['title1']
+    report_one_atag = report_one['first_atag']
+    report_one_class = report_one['first_class']
+    report_one_number = report_one['number']
+
+    report_two = return_recent_reports_dict['report_two']
+    report_two_title = report_two['title2']
+    report_two_atag = report_two['second_atag']
+    report_two_class = report_two['second_class']
+    report_two_number = report_two['number']
+
+    report_three = return_recent_reports_dict['report_three']
+    report_three_title = report_three['title3']
+    report_three_atag = report_three['third_atag']
+    report_three_class = report_three['third_class']
+    report_three_number = report_three['number']
+
+    total_sightings = return_recent_reports_dict['total_sightings']
+    return render_template('/states/wisconsin.html',
+                           state_code=passing_variables[0],
+                           state=passing_variables[1],
+                           image=passing_variables[2],
+                           total_sightings=total_sightings,
+                           
+                           
+                           # First recent report varibales
+                           report_one_title=report_one_title,
+                           report_one_atag=report_one_atag,
+                           report_one_class=report_one_class,
+                           report_one_number=report_one_number,
+                           
+                           # Second recent report varibales
+                           report_two_title=report_two_title,
+                           report_two_atag=report_two_atag,
+                           report_two_class=report_two_class,
+                           report_two_number=report_two_number,
+                           
+                           
+                           # Third recent report varibales
+                           report_three_title=report_three_title,
+                           report_three_atag=report_three_atag,
+                           report_three_class=report_three_class,
+                           report_three_number=report_three_number,
+                           
+                           
+                           # County Dict
+                           counties=counties,
+)
+
+
+
+# Oregon State Page 
+@app.route('/oregon.html')
+def oregon():
+    value_get.clear()
+    state_selected.clear()
+    images_host.clear()
+    state_selected.append("oregon") # lower case
+    passing_variables = ["OR", "Oregon", "oregon.png"]
+    images_host.append('oregon.png')
+    return_recent_reports_dict = getting_recent_reports(passing_variables[1])
+    counties = getting_counties(passing_variables[1])
+
+    report_one = return_recent_reports_dict['report_one']
+    report_one_title = report_one['title1']
+    report_one_atag = report_one['first_atag']
+    report_one_class = report_one['first_class']
+    report_one_number = report_one['number']
+
+    report_two = return_recent_reports_dict['report_two']
+    report_two_title = report_two['title2']
+    report_two_atag = report_two['second_atag']
+    report_two_class = report_two['second_class']
+    report_two_number = report_two['number']
+
+    report_three = return_recent_reports_dict['report_three']
+    report_three_title = report_three['title3']
+    report_three_atag = report_three['third_atag']
+    report_three_class = report_three['third_class']
+    report_three_number = report_three['number']
+
+    total_sightings = return_recent_reports_dict['total_sightings']
+    return render_template('/states/oregon.html',
+                           state_code=passing_variables[0],
+                           state=passing_variables[1],
+                           image=passing_variables[2],
+                           total_sightings=total_sightings,
+                           
+                           
+                           # First recent report varibales
+                           report_one_title=report_one_title,
+                           report_one_atag=report_one_atag,
+                           report_one_class=report_one_class,
+                           report_one_number=report_one_number,
+                           
+                           # Second recent report varibales
+                           report_two_title=report_two_title,
+                           report_two_atag=report_two_atag,
+                           report_two_class=report_two_class,
+                           report_two_number=report_two_number,
+                           
+                           
+                           # Third recent report varibales
+                           report_three_title=report_three_title,
+                           report_three_atag=report_three_atag,
+                           report_three_class=report_three_class,
+                           report_three_number=report_three_number,
+                           
+                           
+                           # County Dict
+                           counties=counties,
+)
+
+
+
+
+# Nebraska State Page 
+@app.route('/nebraska.html')
+def nebraska():
+    value_get.clear()
+    state_selected.clear()
+    images_host.clear()
+    state_selected.append("nebraska") # lower case
+    passing_variables = ["NE", "Nebraska", "nebraska.png"]
+    images_host.append('nebraska.png')
+    return_recent_reports_dict = getting_recent_reports(passing_variables[1])
+    counties = getting_counties(passing_variables[1])
+
+    report_one = return_recent_reports_dict['report_one']
+    report_one_title = report_one['title1']
+    report_one_atag = report_one['first_atag']
+    report_one_class = report_one['first_class']
+    report_one_number = report_one['number']
+
+    report_two = return_recent_reports_dict['report_two']
+    report_two_title = report_two['title2']
+    report_two_atag = report_two['second_atag']
+    report_two_class = report_two['second_class']
+    report_two_number = report_two['number']
+
+    report_three = return_recent_reports_dict['report_three']
+    report_three_title = report_three['title3']
+    report_three_atag = report_three['third_atag']
+    report_three_class = report_three['third_class']
+    report_three_number = report_three['number']
+
+    total_sightings = return_recent_reports_dict['total_sightings']
+    return render_template('/states/nebraska.html',
+                           state_code=passing_variables[0],
+                           state=passing_variables[1],
+                           image=passing_variables[2],
+                           total_sightings=total_sightings,
+                           
+                           
+                           # First recent report varibales
+                           report_one_title=report_one_title,
+                           report_one_atag=report_one_atag,
+                           report_one_class=report_one_class,
+                           report_one_number=report_one_number,
+                           
+                           # Second recent report varibales
+                           report_two_title=report_two_title,
+                           report_two_atag=report_two_atag,
+                           report_two_class=report_two_class,
+                           report_two_number=report_two_number,
+                           
+                           
+                           # Third recent report varibales
+                           report_three_title=report_three_title,
+                           report_three_atag=report_three_atag,
+                           report_three_class=report_three_class,
+                           report_three_number=report_three_number,
+                           
+                           
+                           # County Dict
+                           counties=counties,
+)
+
+
+
+
+# Pennsylvania State Page 
+@app.route('/pennsylvania.html')
+def pennsylvania():
+    value_get.clear()
+    state_selected.clear()
+    images_host.clear()
+    state_selected.append("pennsylvania") # lower case
+    passing_variables = ["PA", "Pennsylvania", "pennsylvania.png"]
+    images_host.append('pennsylvania.png')
+    return_recent_reports_dict = getting_recent_reports(passing_variables[1])
+    counties = getting_counties(passing_variables[1])
+
+    report_one = return_recent_reports_dict['report_one']
+    report_one_title = report_one['title1']
+    report_one_atag = report_one['first_atag']
+    report_one_class = report_one['first_class']
+    report_one_number = report_one['number']
+
+    report_two = return_recent_reports_dict['report_two']
+    report_two_title = report_two['title2']
+    report_two_atag = report_two['second_atag']
+    report_two_class = report_two['second_class']
+    report_two_number = report_two['number']
+
+    report_three = return_recent_reports_dict['report_three']
+    report_three_title = report_three['title3']
+    report_three_atag = report_three['third_atag']
+    report_three_class = report_three['third_class']
+    report_three_number = report_three['number']
+
+    total_sightings = return_recent_reports_dict['total_sightings']
+    return render_template('/states/pennsylvania.html',
+                           state_code=passing_variables[0],
+                           state=passing_variables[1],
+                           image=passing_variables[2],
+                           total_sightings=total_sightings,
+                           
+                           
+                           # First recent report varibales
+                           report_one_title=report_one_title,
+                           report_one_atag=report_one_atag,
+                           report_one_class=report_one_class,
+                           report_one_number=report_one_number,
+                           
+                           # Second recent report varibales
+                           report_two_title=report_two_title,
+                           report_two_atag=report_two_atag,
+                           report_two_class=report_two_class,
+                           report_two_number=report_two_number,
+                           
+                           
+                           # Third recent report varibales
+                           report_three_title=report_three_title,
+                           report_three_atag=report_three_atag,
+                           report_three_class=report_three_class,
+                           report_three_number=report_three_number,
+                           
+                           
+                           # County Dict
+                           counties=counties,
+)
+
+
+
+# Washington State Page 
+@app.route('/washington.html')
+def washington():
+    value_get.clear()
+    state_selected.clear()
+    images_host.clear()
+    state_selected.append("washington") # lower case
+    passing_variables = ["WA", "Washington", "washington.png"]
+    images_host.append('washington.png')
+    return_recent_reports_dict = getting_recent_reports(passing_variables[1])
+    counties = getting_counties(passing_variables[1])
+
+    report_one = return_recent_reports_dict['report_one']
+    report_one_title = report_one['title1']
+    report_one_atag = report_one['first_atag']
+    report_one_class = report_one['first_class']
+    report_one_number = report_one['number']
+
+    report_two = return_recent_reports_dict['report_two']
+    report_two_title = report_two['title2']
+    report_two_atag = report_two['second_atag']
+    report_two_class = report_two['second_class']
+    report_two_number = report_two['number']
+
+    report_three = return_recent_reports_dict['report_three']
+    report_three_title = report_three['title3']
+    report_three_atag = report_three['third_atag']
+    report_three_class = report_three['third_class']
+    report_three_number = report_three['number']
+
+    total_sightings = return_recent_reports_dict['total_sightings']
+    return render_template('/states/washington.html',
+                           state_code=passing_variables[0],
+                           state=passing_variables[1],
+                           image=passing_variables[2],
+                           total_sightings=total_sightings,
+                           
+                           
+                           # First recent report varibales
+                           report_one_title=report_one_title,
+                           report_one_atag=report_one_atag,
+                           report_one_class=report_one_class,
+                           report_one_number=report_one_number,
+                           
+                           # Second recent report varibales
+                           report_two_title=report_two_title,
+                           report_two_atag=report_two_atag,
+                           report_two_class=report_two_class,
+                           report_two_number=report_two_number,
+                           
+                           
+                           # Third recent report varibales
+                           report_three_title=report_three_title,
+                           report_three_atag=report_three_atag,
+                           report_three_class=report_three_class,
+                           report_three_number=report_three_number,
+                           
+                           
+                           # County Dict
+                           counties=counties,
+)
+
+
+
+
+# Louisiana State Page 
+@app.route('/louisiana.html')
+def louisiana():
+    value_get.clear()
+    state_selected.clear()
+    images_host.clear()
+    state_selected.append("louisiana") # lower case
+    passing_variables = ["LA", "Louisiana", "louisiana.png"]
+    images_host.append('louisiana.png')
+    return_recent_reports_dict = getting_recent_reports(passing_variables[1])
+    counties = getting_counties(passing_variables[1])
+
+    report_one = return_recent_reports_dict['report_one']
+    report_one_title = report_one['title1']
+    report_one_atag = report_one['first_atag']
+    report_one_class = report_one['first_class']
+    report_one_number = report_one['number']
+
+    report_two = return_recent_reports_dict['report_two']
+    report_two_title = report_two['title2']
+    report_two_atag = report_two['second_atag']
+    report_two_class = report_two['second_class']
+    report_two_number = report_two['number']
+
+    report_three = return_recent_reports_dict['report_three']
+    report_three_title = report_three['title3']
+    report_three_atag = report_three['third_atag']
+    report_three_class = report_three['third_class']
+    report_three_number = report_three['number']
+
+    total_sightings = return_recent_reports_dict['total_sightings']
+    return render_template('/states/louisiana.html',
+                           state_code=passing_variables[0],
+                           state=passing_variables[1],
+                           image=passing_variables[2],
+                           total_sightings=total_sightings,
+                           
+                           
+                           # First recent report varibales
+                           report_one_title=report_one_title,
+                           report_one_atag=report_one_atag,
+                           report_one_class=report_one_class,
+                           report_one_number=report_one_number,
+                           
+                           # Second recent report varibales
+                           report_two_title=report_two_title,
+                           report_two_atag=report_two_atag,
+                           report_two_class=report_two_class,
+                           report_two_number=report_two_number,
+                           
+                           
+                           # Third recent report varibales
+                           report_three_title=report_three_title,
+                           report_three_atag=report_three_atag,
+                           report_three_class=report_three_class,
+                           report_three_number=report_three_number,
+                           
+                           
+                           # County Dict
+                           counties=counties,
+)
+
+
+
+
+# Georgia State Page 
+@app.route('/georgia.html')
+def georgia():
+    value_get.clear()
+    state_selected.clear()
+    images_host.clear()
+    state_selected.append("georgia") # lower case
+    passing_variables = ["GA", "Georgia", "georgia.png"]
+    images_host.append('georgia.png')
+    return_recent_reports_dict = getting_recent_reports(passing_variables[1])
+    counties = getting_counties(passing_variables[1])
+
+    report_one = return_recent_reports_dict['report_one']
+    report_one_title = report_one['title1']
+    report_one_atag = report_one['first_atag']
+    report_one_class = report_one['first_class']
+    report_one_number = report_one['number']
+
+    report_two = return_recent_reports_dict['report_two']
+    report_two_title = report_two['title2']
+    report_two_atag = report_two['second_atag']
+    report_two_class = report_two['second_class']
+    report_two_number = report_two['number']
+
+    report_three = return_recent_reports_dict['report_three']
+    report_three_title = report_three['title3']
+    report_three_atag = report_three['third_atag']
+    report_three_class = report_three['third_class']
+    report_three_number = report_three['number']
+
+    total_sightings = return_recent_reports_dict['total_sightings']
+    return render_template('/states/georgia.html',
+                           state_code=passing_variables[0],
+                           state=passing_variables[1],
+                           image=passing_variables[2],
+                           total_sightings=total_sightings,
+                           
+                           
+                           # First recent report varibales
+                           report_one_title=report_one_title,
+                           report_one_atag=report_one_atag,
+                           report_one_class=report_one_class,
+                           report_one_number=report_one_number,
+                           
+                           # Second recent report varibales
+                           report_two_title=report_two_title,
+                           report_two_atag=report_two_atag,
+                           report_two_class=report_two_class,
+                           report_two_number=report_two_number,
+                           
+                           
+                           # Third recent report varibales
+                           report_three_title=report_three_title,
+                           report_three_atag=report_three_atag,
+                           report_three_class=report_three_class,
+                           report_three_number=report_three_number,
+                           
+                           
+                           # County Dict
+                           counties=counties,
+)
+
+
+
+
+# Alabama State Page 
+@app.route('/alabama.html')
+def alabama():
+    value_get.clear()
+    state_selected.clear()
+    images_host.clear()
+    state_selected.append("alabama") # lower case
+    passing_variables = ["AL", "Alabama", "alabama.png"]
+    images_host.append('alabama.png')
+    return_recent_reports_dict = getting_recent_reports(passing_variables[1])
+    counties = getting_counties(passing_variables[1])
+
+    report_one = return_recent_reports_dict['report_one']
+    report_one_title = report_one['title1']
+    report_one_atag = report_one['first_atag']
+    report_one_class = report_one['first_class']
+    report_one_number = report_one['number']
+
+    report_two = return_recent_reports_dict['report_two']
+    report_two_title = report_two['title2']
+    report_two_atag = report_two['second_atag']
+    report_two_class = report_two['second_class']
+    report_two_number = report_two['number']
+
+    report_three = return_recent_reports_dict['report_three']
+    report_three_title = report_three['title3']
+    report_three_atag = report_three['third_atag']
+    report_three_class = report_three['third_class']
+    report_three_number = report_three['number']
+
+    total_sightings = return_recent_reports_dict['total_sightings']
+    return render_template('/states/alabama.html',
+                           state_code=passing_variables[0],
+                           state=passing_variables[1],
+                           image=passing_variables[2],
+                           total_sightings=total_sightings,
+                           
+                           
+                           # First recent report varibales
+                           report_one_title=report_one_title,
+                           report_one_atag=report_one_atag,
+                           report_one_class=report_one_class,
+                           report_one_number=report_one_number,
+                           
+                           # Second recent report varibales
+                           report_two_title=report_two_title,
+                           report_two_atag=report_two_atag,
+                           report_two_class=report_two_class,
+                           report_two_number=report_two_number,
+                           
+                           
+                           # Third recent report varibales
+                           report_three_title=report_three_title,
+                           report_three_atag=report_three_atag,
+                           report_three_class=report_three_class,
+                           report_three_number=report_three_number,
+                           
+                           
+                           # County Dict
+                           counties=counties,
+)
+
+
+
+
+# Utah State Page 
+@app.route('/utah.html')
+def utah():
+    value_get.clear()
+    state_selected.clear()
+    images_host.clear()
+    state_selected.append("utah") # lower case
+    passing_variables = ["UT", "Utah", "utah.png"]
+    images_host.append('utah.png')
+    return_recent_reports_dict = getting_recent_reports(passing_variables[1])
+    counties = getting_counties(passing_variables[1])
+
+    report_one = return_recent_reports_dict['report_one']
+    report_one_title = report_one['title1']
+    report_one_atag = report_one['first_atag']
+    report_one_class = report_one['first_class']
+    report_one_number = report_one['number']
+
+    report_two = return_recent_reports_dict['report_two']
+    report_two_title = report_two['title2']
+    report_two_atag = report_two['second_atag']
+    report_two_class = report_two['second_class']
+    report_two_number = report_two['number']
+
+    report_three = return_recent_reports_dict['report_three']
+    report_three_title = report_three['title3']
+    report_three_atag = report_three['third_atag']
+    report_three_class = report_three['third_class']
+    report_three_number = report_three['number']
+
+    total_sightings = return_recent_reports_dict['total_sightings']
+    return render_template('/states/utah.html',
+                           state_code=passing_variables[0],
+                           state=passing_variables[1],
+                           image=passing_variables[2],
+                           total_sightings=total_sightings,
+                           
+                           
+                           # First recent report varibales
+                           report_one_title=report_one_title,
+                           report_one_atag=report_one_atag,
+                           report_one_class=report_one_class,
+                           report_one_number=report_one_number,
+                           
+                           # Second recent report varibales
+                           report_two_title=report_two_title,
+                           report_two_atag=report_two_atag,
+                           report_two_class=report_two_class,
+                           report_two_number=report_two_number,
+                           
+                           
+                           # Third recent report varibales
+                           report_three_title=report_three_title,
+                           report_three_atag=report_three_atag,
+                           report_three_class=report_three_class,
+                           report_three_number=report_three_number,
+                           
+                           
+                           # County Dict
+                           counties=counties,
+)
+
+
+
+# Ohio State Page 
+@app.route('/ohio.html')
+def ohio():
+    value_get.clear()
+    state_selected.clear()
+    images_host.clear()
+    state_selected.append("ohio") # lower case
+    passing_variables = ["OH", "Ohio", "ohio.png"]
+    images_host.append('ohio.png')
+    return_recent_reports_dict = getting_recent_reports(passing_variables[1])
+    counties = getting_counties(passing_variables[1])
+
+    report_one = return_recent_reports_dict['report_one']
+    report_one_title = report_one['title1']
+    report_one_atag = report_one['first_atag']
+    report_one_class = report_one['first_class']
+    report_one_number = report_one['number']
+
+    report_two = return_recent_reports_dict['report_two']
+    report_two_title = report_two['title2']
+    report_two_atag = report_two['second_atag']
+    report_two_class = report_two['second_class']
+    report_two_number = report_two['number']
+
+    report_three = return_recent_reports_dict['report_three']
+    report_three_title = report_three['title3']
+    report_three_atag = report_three['third_atag']
+    report_three_class = report_three['third_class']
+    report_three_number = report_three['number']
+
+    total_sightings = return_recent_reports_dict['total_sightings']
+    return render_template('/states/ohio.html',
+                           state_code=passing_variables[0],
+                           state=passing_variables[1],
+                           image=passing_variables[2],
+                           total_sightings=total_sightings,
+                           
+                           
+                           # First recent report varibales
+                           report_one_title=report_one_title,
+                           report_one_atag=report_one_atag,
+                           report_one_class=report_one_class,
+                           report_one_number=report_one_number,
+                           
+                           # Second recent report varibales
+                           report_two_title=report_two_title,
+                           report_two_atag=report_two_atag,
+                           report_two_class=report_two_class,
+                           report_two_number=report_two_number,
+                           
+                           
+                           # Third recent report varibales
+                           report_three_title=report_three_title,
+                           report_three_atag=report_three_atag,
+                           report_three_class=report_three_class,
+                           report_three_number=report_three_number,
+                           
+                           
+                           # County Dict
+                           counties=counties,
+)
+
+
+
+
+# Colorado State Page 
+@app.route('/colorado.html')
+def colorado():
+    value_get.clear()
+    state_selected.clear()
+    images_host.clear()
+    state_selected.append("colorado") # lower case
+    passing_variables = ["CO", "Colorado", "colorado.png"]
+    images_host.append('colorado.png')
+    return_recent_reports_dict = getting_recent_reports(passing_variables[1])
+    counties = getting_counties(passing_variables[1])
+
+    report_one = return_recent_reports_dict['report_one']
+    report_one_title = report_one['title1']
+    report_one_atag = report_one['first_atag']
+    report_one_class = report_one['first_class']
+    report_one_number = report_one['number']
+
+    report_two = return_recent_reports_dict['report_two']
+    report_two_title = report_two['title2']
+    report_two_atag = report_two['second_atag']
+    report_two_class = report_two['second_class']
+    report_two_number = report_two['number']
+
+    report_three = return_recent_reports_dict['report_three']
+    report_three_title = report_three['title3']
+    report_three_atag = report_three['third_atag']
+    report_three_class = report_three['third_class']
+    report_three_number = report_three['number']
+
+    total_sightings = return_recent_reports_dict['total_sightings']
+    return render_template('/states/colorado.html',
+                           state_code=passing_variables[0],
+                           state=passing_variables[1],
+                           image=passing_variables[2],
+                           total_sightings=total_sightings,
+                           
+                           
+                           # First recent report varibales
+                           report_one_title=report_one_title,
+                           report_one_atag=report_one_atag,
+                           report_one_class=report_one_class,
+                           report_one_number=report_one_number,
+                           
+                           # Second recent report varibales
+                           report_two_title=report_two_title,
+                           report_two_atag=report_two_atag,
+                           report_two_class=report_two_class,
+                           report_two_number=report_two_number,
+                           
+                           
+                           # Third recent report varibales
+                           report_three_title=report_three_title,
+                           report_three_atag=report_three_atag,
+                           report_three_class=report_three_class,
+                           report_three_number=report_three_number,
+                           
+                           
+                           # County Dict
+                           counties=counties,
+)
+
+
+
+
+# South Carolina State Page 
+@app.route('/south_carolina.html')
+def south_carolina():
+    value_get.clear()
+    state_selected.clear()
+    images_host.clear()
+    state_selected.append("south carolina") # lower case
+    passing_variables = ["SC", "South Carolina", "south-carolina.png"]
+    images_host.append('south-carolina.png')
+    return_recent_reports_dict = getting_recent_reports(passing_variables[1])
+    counties = getting_counties(passing_variables[1])
+
+    report_one = return_recent_reports_dict['report_one']
+    report_one_title = report_one['title1']
+    report_one_atag = report_one['first_atag']
+    report_one_class = report_one['first_class']
+    report_one_number = report_one['number']
+
+    report_two = return_recent_reports_dict['report_two']
+    report_two_title = report_two['title2']
+    report_two_atag = report_two['second_atag']
+    report_two_class = report_two['second_class']
+    report_two_number = report_two['number']
+
+    report_three = return_recent_reports_dict['report_three']
+    report_three_title = report_three['title3']
+    report_three_atag = report_three['third_atag']
+    report_three_class = report_three['third_class']
+    report_three_number = report_three['number']
+
+    total_sightings = return_recent_reports_dict['total_sightings']
+    return render_template('/states/south_carolina.html',
+                           state_code=passing_variables[0],
+                           state=passing_variables[1],
+                           image=passing_variables[2],
+                           total_sightings=total_sightings,
+                           
+                           
+                           # First recent report varibales
+                           report_one_title=report_one_title,
+                           report_one_atag=report_one_atag,
+                           report_one_class=report_one_class,
+                           report_one_number=report_one_number,
+                           
+                           # Second recent report varibales
+                           report_two_title=report_two_title,
+                           report_two_atag=report_two_atag,
+                           report_two_class=report_two_class,
+                           report_two_number=report_two_number,
+                           
+                           
+                           # Third recent report varibales
+                           report_three_title=report_three_title,
+                           report_three_atag=report_three_atag,
+                           report_three_class=report_three_class,
+                           report_three_number=report_three_number,
+                           
+                           
+                           # County Dict
+                           counties=counties,
+)
+
+
+
+
+# Oklahoma State Page 
+@app.route('/oklahoma.html')
+def oklahoma():
+    value_get.clear()
+    state_selected.clear()
+    images_host.clear()
+    state_selected.append("oklahoma") # lower case
+    passing_variables = ["OK", "Oklahoma", "oklahoma.png"]
+    images_host.append('oklahoma.png')
+    return_recent_reports_dict = getting_recent_reports(passing_variables[1])
+    counties = getting_counties(passing_variables[1])
+
+    report_one = return_recent_reports_dict['report_one']
+    report_one_title = report_one['title1']
+    report_one_atag = report_one['first_atag']
+    report_one_class = report_one['first_class']
+    report_one_number = report_one['number']
+
+    report_two = return_recent_reports_dict['report_two']
+    report_two_title = report_two['title2']
+    report_two_atag = report_two['second_atag']
+    report_two_class = report_two['second_class']
+    report_two_number = report_two['number']
+
+    report_three = return_recent_reports_dict['report_three']
+    report_three_title = report_three['title3']
+    report_three_atag = report_three['third_atag']
+    report_three_class = report_three['third_class']
+    report_three_number = report_three['number']
+
+    total_sightings = return_recent_reports_dict['total_sightings']
+    return render_template('/states/oklahoma.html',
+                           state_code=passing_variables[0],
+                           state=passing_variables[1],
+                           image=passing_variables[2],
+                           total_sightings=total_sightings,
+                           
+                           
+                           # First recent report varibales
+                           report_one_title=report_one_title,
+                           report_one_atag=report_one_atag,
+                           report_one_class=report_one_class,
+                           report_one_number=report_one_number,
+                           
+                           # Second recent report varibales
+                           report_two_title=report_two_title,
+                           report_two_atag=report_two_atag,
+                           report_two_class=report_two_class,
+                           report_two_number=report_two_number,
+                           
+                           
+                           # Third recent report varibales
+                           report_three_title=report_three_title,
+                           report_three_atag=report_three_atag,
+                           report_three_class=report_three_class,
+                           report_three_number=report_three_number,
+                           
+                           
+                           # County Dict
+                           counties=counties,
+)
+
+
+
+# Tennessee State Page 
+@app.route('/tennessee.html')
+def tennessee():
+    value_get.clear()
+    state_selected.clear()
+    images_host.clear()
+    state_selected.append("tennessee") # lower case
+    passing_variables = ["TN", "Tennessee", "tennessee.png"]
+    images_host.append('tennessee.png')
+    return_recent_reports_dict = getting_recent_reports(passing_variables[1])
+    counties = getting_counties(passing_variables[1])
+
+    report_one = return_recent_reports_dict['report_one']
+    report_one_title = report_one['title1']
+    report_one_atag = report_one['first_atag']
+    report_one_class = report_one['first_class']
+    report_one_number = report_one['number']
+
+    report_two = return_recent_reports_dict['report_two']
+    report_two_title = report_two['title2']
+    report_two_atag = report_two['second_atag']
+    report_two_class = report_two['second_class']
+    report_two_number = report_two['number']
+
+    report_three = return_recent_reports_dict['report_three']
+    report_three_title = report_three['title3']
+    report_three_atag = report_three['third_atag']
+    report_three_class = report_three['third_class']
+    report_three_number = report_three['number']
+
+    total_sightings = return_recent_reports_dict['total_sightings']
+    return render_template('/states/tennessee.html',
+                           state_code=passing_variables[0],
+                           state=passing_variables[1],
+                           image=passing_variables[2],
+                           total_sightings=total_sightings,
+                           
+                           
+                           # First recent report varibales
+                           report_one_title=report_one_title,
+                           report_one_atag=report_one_atag,
+                           report_one_class=report_one_class,
+                           report_one_number=report_one_number,
+                           
+                           # Second recent report varibales
+                           report_two_title=report_two_title,
+                           report_two_atag=report_two_atag,
+                           report_two_class=report_two_class,
+                           report_two_number=report_two_number,
+                           
+                           
+                           # Third recent report varibales
+                           report_three_title=report_three_title,
+                           report_three_atag=report_three_atag,
+                           report_three_class=report_three_class,
+                           report_three_number=report_three_number,
+                           
+                           
+                           # County Dict
+                           counties=counties,
+)
+
+
+
+
+# Wyoming State Page 
+@app.route('/wyoming.html')
+def wyoming():
+    value_get.clear()
+    state_selected.clear()
+    images_host.clear()
+    state_selected.append("wyoming") # lower case
+    passing_variables = ["WY", "Wyoming", "wyoming.png"]
+    images_host.append('wyoming.png')
+    return_recent_reports_dict = getting_recent_reports(passing_variables[1])
+    counties = getting_counties(passing_variables[1])
+
+    report_one = return_recent_reports_dict['report_one']
+    report_one_title = report_one['title1']
+    report_one_atag = report_one['first_atag']
+    report_one_class = report_one['first_class']
+    report_one_number = report_one['number']
+
+    report_two = return_recent_reports_dict['report_two']
+    report_two_title = report_two['title2']
+    report_two_atag = report_two['second_atag']
+    report_two_class = report_two['second_class']
+    report_two_number = report_two['number']
+
+    report_three = return_recent_reports_dict['report_three']
+    report_three_title = report_three['title3']
+    report_three_atag = report_three['third_atag']
+    report_three_class = report_three['third_class']
+    report_three_number = report_three['number']
+
+    total_sightings = return_recent_reports_dict['total_sightings']
+    return render_template('/states/wyoming.html',
+                           state_code=passing_variables[0],
+                           state=passing_variables[1],
+                           image=passing_variables[2],
+                           total_sightings=total_sightings,
+                           
+                           
+                           # First recent report varibales
+                           report_one_title=report_one_title,
+                           report_one_atag=report_one_atag,
+                           report_one_class=report_one_class,
+                           report_one_number=report_one_number,
+                           
+                           # Second recent report varibales
+                           report_two_title=report_two_title,
+                           report_two_atag=report_two_atag,
+                           report_two_class=report_two_class,
+                           report_two_number=report_two_number,
+                           
+                           
+                           # Third recent report varibales
+                           report_three_title=report_three_title,
+                           report_three_atag=report_three_atag,
+                           report_three_class=report_three_class,
+                           report_three_number=report_three_number,
+                           
+                           
+                           # County Dict
+                           counties=counties,
+)
+
+
+
+
+
+# North Dakota State Page 
+@app.route('/north_dakota.html')
+def north_dakota():
+    value_get.clear()
+    state_selected.clear()
+    images_host.clear()
+    state_selected.append("north dakota") # lower case
+    passing_variables = ["ND", "North Dakota", "north-dakota.png"]
+    images_host.append('north-dakota.png')
+    return_recent_reports_dict = getting_recent_reports(passing_variables[1])
+    counties = getting_counties(passing_variables[1])
+
+    report_one = return_recent_reports_dict['report_one']
+    report_one_title = report_one['title1']
+    report_one_atag = report_one['first_atag']
+    report_one_class = report_one['first_class']
+    report_one_number = report_one['number']
+
+    report_two = return_recent_reports_dict['report_two']
+    report_two_title = report_two['title2']
+    report_two_atag = report_two['second_atag']
+    report_two_class = report_two['second_class']
+    report_two_number = report_two['number']
+
+    report_three = return_recent_reports_dict['report_three']
+    report_three_title = report_three['title3']
+    report_three_atag = report_three['third_atag']
+    report_three_class = report_three['third_class']
+    report_three_number = report_three['number']
+
+    total_sightings = return_recent_reports_dict['total_sightings']
+    return render_template('/states/north_dakota.html',
+                           state_code=passing_variables[0],
+                           state=passing_variables[1],
+                           image=passing_variables[2],
+                           total_sightings=total_sightings,
+                           
+                           
+                           # First recent report varibales
+                           report_one_title=report_one_title,
+                           report_one_atag=report_one_atag,
+                           report_one_class=report_one_class,
+                           report_one_number=report_one_number,
+                           
+                           # Second recent report varibales
+                           report_two_title=report_two_title,
+                           report_two_atag=report_two_atag,
+                           report_two_class=report_two_class,
+                           report_two_number=report_two_number,
+                           
+                           
+                           # Third recent report varibales
+                           report_three_title=report_three_title,
+                           report_three_atag=report_three_atag,
+                           report_three_class=report_three_class,
+                           report_three_number=report_three_number,
+                           
+                           
+                           # County Dict
+                           counties=counties,
+)
+
+
+
+
+
+# Kentucky State Page 
+@app.route('/kentucky.html')
+def kentucky():
+    value_get.clear()
+    state_selected.clear()
+    images_host.clear()
+    state_selected.append("kentucky") # lower case
+    passing_variables = ["KY", "Kentucky", "kentucky.png"]
+    images_host.append('kentucky.png')
+    return_recent_reports_dict = getting_recent_reports(passing_variables[1])
+    counties = getting_counties(passing_variables[1])
+
+    report_one = return_recent_reports_dict['report_one']
+    report_one_title = report_one['title1']
+    report_one_atag = report_one['first_atag']
+    report_one_class = report_one['first_class']
+    report_one_number = report_one['number']
+
+    report_two = return_recent_reports_dict['report_two']
+    report_two_title = report_two['title2']
+    report_two_atag = report_two['second_atag']
+    report_two_class = report_two['second_class']
+    report_two_number = report_two['number']
+
+    report_three = return_recent_reports_dict['report_three']
+    report_three_title = report_three['title3']
+    report_three_atag = report_three['third_atag']
+    report_three_class = report_three['third_class']
+    report_three_number = report_three['number']
+
+    total_sightings = return_recent_reports_dict['total_sightings']
+    return render_template('/states/kentucky.html',
+                           state_code=passing_variables[0],
+                           state=passing_variables[1],
+                           image=passing_variables[2],
+                           total_sightings=total_sightings,
+                           
+                           
+                           # First recent report varibales
+                           report_one_title=report_one_title,
+                           report_one_atag=report_one_atag,
+                           report_one_class=report_one_class,
+                           report_one_number=report_one_number,
+                           
+                           # Second recent report varibales
+                           report_two_title=report_two_title,
+                           report_two_atag=report_two_atag,
+                           report_two_class=report_two_class,
+                           report_two_number=report_two_number,
+                           
+                           
+                           # Third recent report varibales
+                           report_three_title=report_three_title,
+                           report_three_atag=report_three_atag,
+                           report_three_class=report_three_class,
+                           report_three_number=report_three_number,
+                           
+                           
+                           # County Dict
+                           counties=counties,
+)
+
+
+
+# Maine State Page 
+@app.route('/maine.html')
+def maine():
+    value_get.clear()
+    state_selected.clear()
+    images_host.clear()
+    state_selected.append("maine") # lower case
+    passing_variables = ["ME", "Maine", "maine.png"]
+    images_host.append('maine.png')
+    return_recent_reports_dict = getting_recent_reports(passing_variables[1])
+    counties = getting_counties(passing_variables[1])
+
+    report_one = return_recent_reports_dict['report_one']
+    report_one_title = report_one['title1']
+    report_one_atag = report_one['first_atag']
+    report_one_class = report_one['first_class']
+    report_one_number = report_one['number']
+
+    report_two = return_recent_reports_dict['report_two']
+    report_two_title = report_two['title2']
+    report_two_atag = report_two['second_atag']
+    report_two_class = report_two['second_class']
+    report_two_number = report_two['number']
+
+    report_three = return_recent_reports_dict['report_three']
+    report_three_title = report_three['title3']
+    report_three_atag = report_three['third_atag']
+    report_three_class = report_three['third_class']
+    report_three_number = report_three['number']
+
+    total_sightings = return_recent_reports_dict['total_sightings']
+    return render_template('/states/maine.html',
+                           state_code=passing_variables[0],
+                           state=passing_variables[1],
+                           image=passing_variables[2],
+                           total_sightings=total_sightings,
+                           
+                           
+                           # First recent report varibales
+                           report_one_title=report_one_title,
+                           report_one_atag=report_one_atag,
+                           report_one_class=report_one_class,
+                           report_one_number=report_one_number,
+                           
+                           # Second recent report varibales
+                           report_two_title=report_two_title,
+                           report_two_atag=report_two_atag,
+                           report_two_class=report_two_class,
+                           report_two_number=report_two_number,
+                           
+                           
+                           # Third recent report varibales
+                           report_three_title=report_three_title,
+                           report_three_atag=report_three_atag,
+                           report_three_class=report_three_class,
+                           report_three_number=report_three_number,
+                           
+                           
+                           # County Dict
+                           counties=counties,
+)
+
+
+
+
+# New York State Page 
+@app.route('/new_york.html')
+def new_york():
+    value_get.clear()
+    state_selected.clear()
+    images_host.clear()
+    state_selected.append("new york") # lower case
+    passing_variables = ["NY", "New York", "new-york.png"]
+    images_host.append('new-york.png')
+    return_recent_reports_dict = getting_recent_reports(passing_variables[1])
+    counties = getting_counties(passing_variables[1])
+
+    report_one = return_recent_reports_dict['report_one']
+    report_one_title = report_one['title1']
+    report_one_atag = report_one['first_atag']
+    report_one_class = report_one['first_class']
+    report_one_number = report_one['number']
+
+    report_two = return_recent_reports_dict['report_two']
+    report_two_title = report_two['title2']
+    report_two_atag = report_two['second_atag']
+    report_two_class = report_two['second_class']
+    report_two_number = report_two['number']
+
+    report_three = return_recent_reports_dict['report_three']
+    report_three_title = report_three['title3']
+    report_three_atag = report_three['third_atag']
+    report_three_class = report_three['third_class']
+    report_three_number = report_three['number']
+
+    total_sightings = return_recent_reports_dict['total_sightings']
+    return render_template('/states/new_york.html',
+                           state_code=passing_variables[0],
+                           state=passing_variables[1],
+                           image=passing_variables[2],
+                           total_sightings=total_sightings,
+                           
+                           
+                           # First recent report varibales
+                           report_one_title=report_one_title,
+                           report_one_atag=report_one_atag,
+                           report_one_class=report_one_class,
+                           report_one_number=report_one_number,
+                           
+                           # Second recent report varibales
+                           report_two_title=report_two_title,
+                           report_two_atag=report_two_atag,
+                           report_two_class=report_two_class,
+                           report_two_number=report_two_number,
+                           
+                           
+                           # Third recent report varibales
+                           report_three_title=report_three_title,
+                           report_three_atag=report_three_atag,
+                           report_three_class=report_three_class,
+                           report_three_number=report_three_number,
+                           
+                           
+                           # County Dict
+                           counties=counties,
+)
+
+
+
+# Michigan State Page 
+@app.route('/michigan.html')
+def michigan():
+    value_get.clear()
+    state_selected.clear()
+    images_host.clear()
+    state_selected.append("michigan") # lower case
+    passing_variables = ["MI", "Michigan", "michigan.png"]
+    images_host.append('michigan.png')
+    return_recent_reports_dict = getting_recent_reports(passing_variables[1])
+    counties = getting_counties(passing_variables[1])
+
+    report_one = return_recent_reports_dict['report_one']
+    report_one_title = report_one['title1']
+    report_one_atag = report_one['first_atag']
+    report_one_class = report_one['first_class']
+    report_one_number = report_one['number']
+
+    report_two = return_recent_reports_dict['report_two']
+    report_two_title = report_two['title2']
+    report_two_atag = report_two['second_atag']
+    report_two_class = report_two['second_class']
+    report_two_number = report_two['number']
+
+    report_three = return_recent_reports_dict['report_three']
+    report_three_title = report_three['title3']
+    report_three_atag = report_three['third_atag']
+    report_three_class = report_three['third_class']
+    report_three_number = report_three['number']
+
+    total_sightings = return_recent_reports_dict['total_sightings']
+    return render_template('/states/michigan.html',
+                           state_code=passing_variables[0],
+                           state=passing_variables[1],
+                           image=passing_variables[2],
+                           total_sightings=total_sightings,
+                           
+                           
+                           # First recent report varibales
+                           report_one_title=report_one_title,
+                           report_one_atag=report_one_atag,
+                           report_one_class=report_one_class,
+                           report_one_number=report_one_number,
+                           
+                           # Second recent report varibales
+                           report_two_title=report_two_title,
+                           report_two_atag=report_two_atag,
+                           report_two_class=report_two_class,
+                           report_two_number=report_two_number,
+                           
+                           
+                           # Third recent report varibales
+                           report_three_title=report_three_title,
+                           report_three_atag=report_three_atag,
+                           report_three_class=report_three_class,
+                           report_three_number=report_three_number,
+                           
+                           
+                           # County Dict
+                           counties=counties,
+)
+
+
+
+
+
+# Arkansas State Page 
+@app.route('/arkansas.html')
+def arkansas():
+    value_get.clear()
+    state_selected.clear()
+    images_host.clear()
+    state_selected.append("arkansas") # lower case
+    passing_variables = ["AR", "Arkansas", "arkansas.png"]
+    images_host.append('arkansas.png')
+    return_recent_reports_dict = getting_recent_reports(passing_variables[1])
+    counties = getting_counties(passing_variables[1])
+
+    report_one = return_recent_reports_dict['report_one']
+    report_one_title = report_one['title1']
+    report_one_atag = report_one['first_atag']
+    report_one_class = report_one['first_class']
+    report_one_number = report_one['number']
+
+    report_two = return_recent_reports_dict['report_two']
+    report_two_title = report_two['title2']
+    report_two_atag = report_two['second_atag']
+    report_two_class = report_two['second_class']
+    report_two_number = report_two['number']
+
+    report_three = return_recent_reports_dict['report_three']
+    report_three_title = report_three['title3']
+    report_three_atag = report_three['third_atag']
+    report_three_class = report_three['third_class']
+    report_three_number = report_three['number']
+
+    total_sightings = return_recent_reports_dict['total_sightings']
+    return render_template('/states/arkansas.html',
+                           state_code=passing_variables[0],
+                           state=passing_variables[1],
+                           image=passing_variables[2],
+                           total_sightings=total_sightings,
+                           
+                           
+                           # First recent report varibales
+                           report_one_title=report_one_title,
+                           report_one_atag=report_one_atag,
+                           report_one_class=report_one_class,
+                           report_one_number=report_one_number,
+                           
+                           # Second recent report varibales
+                           report_two_title=report_two_title,
+                           report_two_atag=report_two_atag,
+                           report_two_class=report_two_class,
+                           report_two_number=report_two_number,
+                           
+                           
+                           # Third recent report varibales
+                           report_three_title=report_three_title,
+                           report_three_atag=report_three_atag,
+                           report_three_class=report_three_class,
+                           report_three_number=report_three_number,
+                           
+                           
+                           # County Dict
+                           counties=counties,
+)
+
+
+
+
+# Mississippi State Page 
+@app.route('/mississippi.html')
+def mississippi():
+    value_get.clear()
+    state_selected.clear()
+    images_host.clear()
+    state_selected.append("mississippi") # lower case
+    passing_variables = ["MS", "Mississippi", "mississippi.png"]
+    images_host.append('mississippi.png')
+    return_recent_reports_dict = getting_recent_reports(passing_variables[1])
+    counties = getting_counties(passing_variables[1])
+
+    report_one = return_recent_reports_dict['report_one']
+    report_one_title = report_one['title1']
+    report_one_atag = report_one['first_atag']
+    report_one_class = report_one['first_class']
+    report_one_number = report_one['number']
+
+    report_two = return_recent_reports_dict['report_two']
+    report_two_title = report_two['title2']
+    report_two_atag = report_two['second_atag']
+    report_two_class = report_two['second_class']
+    report_two_number = report_two['number']
+
+    report_three = return_recent_reports_dict['report_three']
+    report_three_title = report_three['title3']
+    report_three_atag = report_three['third_atag']
+    report_three_class = report_three['third_class']
+    report_three_number = report_three['number']
+
+    total_sightings = return_recent_reports_dict['total_sightings']
+    return render_template('/states/mississippi.html',
+                           state_code=passing_variables[0],
+                           state=passing_variables[1],
+                           image=passing_variables[2],
+                           total_sightings=total_sightings,
+                           
+                           
+                           # First recent report varibales
+                           report_one_title=report_one_title,
+                           report_one_atag=report_one_atag,
+                           report_one_class=report_one_class,
+                           report_one_number=report_one_number,
+                           
+                           # Second recent report varibales
+                           report_two_title=report_two_title,
+                           report_two_atag=report_two_atag,
+                           report_two_class=report_two_class,
+                           report_two_number=report_two_number,
+                           
+                           
+                           # Third recent report varibales
+                           report_three_title=report_three_title,
+                           report_three_atag=report_three_atag,
+                           report_three_class=report_three_class,
+                           report_three_number=report_three_number,
+                           
+                           
+                           # County Dict
+                           counties=counties,
+)
+
+
+
+
+
+# Missouri State Page 
+@app.route('/missouri.html')
+def missouri():
+    value_get.clear()
+    state_selected.clear()
+    images_host.clear()
+    state_selected.append("missouri") # lower case
+    passing_variables = ["MO", "Missouri", "missouri.png"]
+    images_host.append('missouri.png')
+    return_recent_reports_dict = getting_recent_reports(passing_variables[1])
+    counties = getting_counties(passing_variables[1])
+
+    report_one = return_recent_reports_dict['report_one']
+    report_one_title = report_one['title1']
+    report_one_atag = report_one['first_atag']
+    report_one_class = report_one['first_class']
+    report_one_number = report_one['number']
+
+    report_two = return_recent_reports_dict['report_two']
+    report_two_title = report_two['title2']
+    report_two_atag = report_two['second_atag']
+    report_two_class = report_two['second_class']
+    report_two_number = report_two['number']
+
+    report_three = return_recent_reports_dict['report_three']
+    report_three_title = report_three['title3']
+    report_three_atag = report_three['third_atag']
+    report_three_class = report_three['third_class']
+    report_three_number = report_three['number']
+
+    total_sightings = return_recent_reports_dict['total_sightings']
+    return render_template('/states/missouri.html',
+                           state_code=passing_variables[0],
+                           state=passing_variables[1],
+                           image=passing_variables[2],
+                           total_sightings=total_sightings,
+                           
+                           
+                           # First recent report varibales
+                           report_one_title=report_one_title,
+                           report_one_atag=report_one_atag,
+                           report_one_class=report_one_class,
+                           report_one_number=report_one_number,
+                           
+                           # Second recent report varibales
+                           report_two_title=report_two_title,
+                           report_two_atag=report_two_atag,
+                           report_two_class=report_two_class,
+                           report_two_number=report_two_number,
+                           
+                           
+                           # Third recent report varibales
+                           report_three_title=report_three_title,
+                           report_three_atag=report_three_atag,
+                           report_three_class=report_three_class,
+                           report_three_number=report_three_number,
+                           
+                           
+                           # County Dict
+                           counties=counties,
+)
+
+
+
+
+
+# Montana State Page 
+@app.route('/montana.html')
+def montana():
+    value_get.clear()
+    state_selected.clear()
+    images_host.clear()
+    state_selected.append("montana") # lower case
+    passing_variables = ["MT", "Montana", "montana.png"]
+    images_host.append('montana.png')
+    return_recent_reports_dict = getting_recent_reports(passing_variables[1])
+    counties = getting_counties(passing_variables[1])
+
+    report_one = return_recent_reports_dict['report_one']
+    report_one_title = report_one['title1']
+    report_one_atag = report_one['first_atag']
+    report_one_class = report_one['first_class']
+    report_one_number = report_one['number']
+
+    report_two = return_recent_reports_dict['report_two']
+    report_two_title = report_two['title2']
+    report_two_atag = report_two['second_atag']
+    report_two_class = report_two['second_class']
+    report_two_number = report_two['number']
+
+    report_three = return_recent_reports_dict['report_three']
+    report_three_title = report_three['title3']
+    report_three_atag = report_three['third_atag']
+    report_three_class = report_three['third_class']
+    report_three_number = report_three['number']
+
+    total_sightings = return_recent_reports_dict['total_sightings']
+    return render_template('/states/montana.html',
+                           state_code=passing_variables[0],
+                           state=passing_variables[1],
+                           image=passing_variables[2],
+                           total_sightings=total_sightings,
+                           
+                           
+                           # First recent report varibales
+                           report_one_title=report_one_title,
+                           report_one_atag=report_one_atag,
+                           report_one_class=report_one_class,
+                           report_one_number=report_one_number,
+                           
+                           # Second recent report varibales
+                           report_two_title=report_two_title,
+                           report_two_atag=report_two_atag,
+                           report_two_class=report_two_class,
+                           report_two_number=report_two_number,
+                           
+                           
+                           # Third recent report varibales
+                           report_three_title=report_three_title,
+                           report_three_atag=report_three_atag,
+                           report_three_class=report_three_class,
+                           report_three_number=report_three_number,
+                           
+                           
+                           # County Dict
+                           counties=counties,
+)
+
+
+
+
+# Kansas State Page 
+@app.route('/kansas.html')
+def kansas():
+    value_get.clear()
+    state_selected.clear()
+    images_host.clear()
+    state_selected.append("kansas") # lower case
+    passing_variables = ["KS", "Kansas", "kansas.png"]
+    images_host.append('kansas.png')
+    return_recent_reports_dict = getting_recent_reports(passing_variables[1])
+    counties = getting_counties(passing_variables[1])
+
+    report_one = return_recent_reports_dict['report_one']
+    report_one_title = report_one['title1']
+    report_one_atag = report_one['first_atag']
+    report_one_class = report_one['first_class']
+    report_one_number = report_one['number']
+
+    report_two = return_recent_reports_dict['report_two']
+    report_two_title = report_two['title2']
+    report_two_atag = report_two['second_atag']
+    report_two_class = report_two['second_class']
+    report_two_number = report_two['number']
+
+    report_three = return_recent_reports_dict['report_three']
+    report_three_title = report_three['title3']
+    report_three_atag = report_three['third_atag']
+    report_three_class = report_three['third_class']
+    report_three_number = report_three['number']
+
+    total_sightings = return_recent_reports_dict['total_sightings']
+    return render_template('/states/kansas.html',
+                           state_code=passing_variables[0],
+                           state=passing_variables[1],
+                           image=passing_variables[2],
+                           total_sightings=total_sightings,
+                           
+                           
+                           # First recent report varibales
+                           report_one_title=report_one_title,
+                           report_one_atag=report_one_atag,
+                           report_one_class=report_one_class,
+                           report_one_number=report_one_number,
+                           
+                           # Second recent report varibales
+                           report_two_title=report_two_title,
+                           report_two_atag=report_two_atag,
+                           report_two_class=report_two_class,
+                           report_two_number=report_two_number,
+                           
+                           
+                           # Third recent report varibales
+                           report_three_title=report_three_title,
+                           report_three_atag=report_three_atag,
+                           report_three_class=report_three_class,
+                           report_three_number=report_three_number,
+                           
+                           
+                           # County Dict
+                           counties=counties,
+)
+
+
+
+
+# Indiana State Page 
+@app.route('/indiana.html')
+def indiana():
+    value_get.clear()
+    state_selected.clear()
+    images_host.clear()
+    state_selected.append("indiana") # lower case
+    passing_variables = ["IN", "Indiana", "indiana.png"]
+    images_host.append('indiana.png')
+    return_recent_reports_dict = getting_recent_reports(passing_variables[1])
+    counties = getting_counties(passing_variables[1])
+
+    report_one = return_recent_reports_dict['report_one']
+    report_one_title = report_one['title1']
+    report_one_atag = report_one['first_atag']
+    report_one_class = report_one['first_class']
+    report_one_number = report_one['number']
+
+    report_two = return_recent_reports_dict['report_two']
+    report_two_title = report_two['title2']
+    report_two_atag = report_two['second_atag']
+    report_two_class = report_two['second_class']
+    report_two_number = report_two['number']
+
+    report_three = return_recent_reports_dict['report_three']
+    report_three_title = report_three['title3']
+    report_three_atag = report_three['third_atag']
+    report_three_class = report_three['third_class']
+    report_three_number = report_three['number']
+
+    total_sightings = return_recent_reports_dict['total_sightings']
+    return render_template('/states/indiana.html',
+                           state_code=passing_variables[0],
+                           state=passing_variables[1],
+                           image=passing_variables[2],
+                           total_sightings=total_sightings,
+                           
+                           
+                           # First recent report varibales
+                           report_one_title=report_one_title,
+                           report_one_atag=report_one_atag,
+                           report_one_class=report_one_class,
+                           report_one_number=report_one_number,
+                           
+                           # Second recent report varibales
+                           report_two_title=report_two_title,
+                           report_two_atag=report_two_atag,
+                           report_two_class=report_two_class,
+                           report_two_number=report_two_number,
+                           
+                           
+                           # Third recent report varibales
+                           report_three_title=report_three_title,
+                           report_three_atag=report_three_atag,
+                           report_three_class=report_three_class,
+                           report_three_number=report_three_number,
+                           
+                           
+                           # County Dict
+                           counties=counties,
+)
+
+
+
+
+
+# South Dakota State Page 
+@app.route('/south_dakota.html')
+def south_dakota():
+    value_get.clear()
+    state_selected.clear()
+    images_host.clear()
+    state_selected.append("south dakota") # lower case
+    passing_variables = ["SD", "South Dakota", "south-dakota.png"]
+    images_host.append('south-dakota.png')
+    return_recent_reports_dict = getting_recent_reports(passing_variables[1])
+    counties = getting_counties(passing_variables[1])
+
+    report_one = return_recent_reports_dict['report_one']
+    report_one_title = report_one['title1']
+    report_one_atag = report_one['first_atag']
+    report_one_class = report_one['first_class']
+    report_one_number = report_one['number']
+
+    report_two = return_recent_reports_dict['report_two']
+    report_two_title = report_two['title2']
+    report_two_atag = report_two['second_atag']
+    report_two_class = report_two['second_class']
+    report_two_number = report_two['number']
+
+    report_three = return_recent_reports_dict['report_three']
+    report_three_title = report_three['title3']
+    report_three_atag = report_three['third_atag']
+    report_three_class = report_three['third_class']
+    report_three_number = report_three['number']
+
+    total_sightings = return_recent_reports_dict['total_sightings']
+    return render_template('/states/south_dakota.html',
+                           state_code=passing_variables[0],
+                           state=passing_variables[1],
+                           image=passing_variables[2],
+                           total_sightings=total_sightings,
+                           
+                           
+                           # First recent report varibales
+                           report_one_title=report_one_title,
+                           report_one_atag=report_one_atag,
+                           report_one_class=report_one_class,
+                           report_one_number=report_one_number,
+                           
+                           # Second recent report varibales
+                           report_two_title=report_two_title,
+                           report_two_atag=report_two_atag,
+                           report_two_class=report_two_class,
+                           report_two_number=report_two_number,
+                           
+                           
+                           # Third recent report varibales
+                           report_three_title=report_three_title,
+                           report_three_atag=report_three_atag,
+                           report_three_class=report_three_class,
+                           report_three_number=report_three_number,
+                           
+                           
+                           # County Dict
+                           counties=counties,
+)
+
+
+
+
+# Massachusetts State Page 
+@app.route('/massachusetts.html')
+def massachusetts():
+    value_get.clear()
+    state_selected.clear()
+    images_host.clear()
+    state_selected.append("massachusetts") # lower case
+    passing_variables = ["MA", "Massachusetts", "massachusetts.png"]
+    images_host.append('massachusetts.png')
+    return_recent_reports_dict = getting_recent_reports(passing_variables[1])
+    counties = getting_counties(passing_variables[1])
+
+    report_one = return_recent_reports_dict['report_one']
+    report_one_title = report_one['title1']
+    report_one_atag = report_one['first_atag']
+    report_one_class = report_one['first_class']
+    report_one_number = report_one['number']
+
+    report_two = return_recent_reports_dict['report_two']
+    report_two_title = report_two['title2']
+    report_two_atag = report_two['second_atag']
+    report_two_class = report_two['second_class']
+    report_two_number = report_two['number']
+
+    report_three = return_recent_reports_dict['report_three']
+    report_three_title = report_three['title3']
+    report_three_atag = report_three['third_atag']
+    report_three_class = report_three['third_class']
+    report_three_number = report_three['number']
+
+    total_sightings = return_recent_reports_dict['total_sightings']
+    return render_template('/states/massachusetts.html',
+                           state_code=passing_variables[0],
+                           state=passing_variables[1],
+                           image=passing_variables[2],
+                           total_sightings=total_sightings,
+                           
+                           
+                           # First recent report varibales
+                           report_one_title=report_one_title,
+                           report_one_atag=report_one_atag,
+                           report_one_class=report_one_class,
+                           report_one_number=report_one_number,
+                           
+                           # Second recent report varibales
+                           report_two_title=report_two_title,
+                           report_two_atag=report_two_atag,
+                           report_two_class=report_two_class,
+                           report_two_number=report_two_number,
+                           
+                           
+                           # Third recent report varibales
+                           report_three_title=report_three_title,
+                           report_three_atag=report_three_atag,
+                           report_three_class=report_three_class,
+                           report_three_number=report_three_number,
+                           
+                           
+                           # County Dict
+                           counties=counties,
+)
+
+
+
+
+
+# Virginia State Page 
+@app.route('/virginia.html')
+def virginia():
+    value_get.clear()
+    state_selected.clear()
+    images_host.clear()
+    state_selected.append("virginia") # lower case
+    passing_variables = ["VA", "Virginia", "virginia.png"]
+    images_host.append('virginia.png')
+    return_recent_reports_dict = getting_recent_reports(passing_variables[1])
+    counties = getting_counties(passing_variables[1])
+
+    report_one = return_recent_reports_dict['report_one']
+    report_one_title = report_one['title1']
+    report_one_atag = report_one['first_atag']
+    report_one_class = report_one['first_class']
+    report_one_number = report_one['number']
+
+    report_two = return_recent_reports_dict['report_two']
+    report_two_title = report_two['title2']
+    report_two_atag = report_two['second_atag']
+    report_two_class = report_two['second_class']
+    report_two_number = report_two['number']
+
+    report_three = return_recent_reports_dict['report_three']
+    report_three_title = report_three['title3']
+    report_three_atag = report_three['third_atag']
+    report_three_class = report_three['third_class']
+    report_three_number = report_three['number']
+
+    total_sightings = return_recent_reports_dict['total_sightings']
+    return render_template('/states/virginia.html',
+                           state_code=passing_variables[0],
+                           state=passing_variables[1],
+                           image=passing_variables[2],
+                           total_sightings=total_sightings,
+                           
+                           
+                           # First recent report varibales
+                           report_one_title=report_one_title,
+                           report_one_atag=report_one_atag,
+                           report_one_class=report_one_class,
+                           report_one_number=report_one_number,
+                           
+                           # Second recent report varibales
+                           report_two_title=report_two_title,
+                           report_two_atag=report_two_atag,
+                           report_two_class=report_two_class,
+                           report_two_number=report_two_number,
+                           
+                           
+                           # Third recent report varibales
+                           report_three_title=report_three_title,
+                           report_three_atag=report_three_atag,
+                           report_three_class=report_three_class,
+                           report_three_number=report_three_number,
+                           
+                           
+                           # County Dict
+                           counties=counties,
+)
+
+
+
+# Iowa State Page 
+@app.route('/iowa.html')
+def iowa():
+    value_get.clear()
+    state_selected.clear()
+    images_host.clear()
+    state_selected.append("iowa") # lower case
+    passing_variables = ["IA", "Iowa", "iowa.png"]
+    images_host.append('iowa.png')
+    return_recent_reports_dict = getting_recent_reports(passing_variables[1])
+    counties = getting_counties(passing_variables[1])
+
+    report_one = return_recent_reports_dict['report_one']
+    report_one_title = report_one['title1']
+    report_one_atag = report_one['first_atag']
+    report_one_class = report_one['first_class']
+    report_one_number = report_one['number']
+
+    report_two = return_recent_reports_dict['report_two']
+    report_two_title = report_two['title2']
+    report_two_atag = report_two['second_atag']
+    report_two_class = report_two['second_class']
+    report_two_number = report_two['number']
+
+    report_three = return_recent_reports_dict['report_three']
+    report_three_title = report_three['title3']
+    report_three_atag = report_three['third_atag']
+    report_three_class = report_three['third_class']
+    report_three_number = report_three['number']
+
+    total_sightings = return_recent_reports_dict['total_sightings']
+    return render_template('/states/iowa.html',
+                           state_code=passing_variables[0],
+                           state=passing_variables[1],
+                           image=passing_variables[2],
+                           total_sightings=total_sightings,
+                           
+                           
+                           # First recent report varibales
+                           report_one_title=report_one_title,
+                           report_one_atag=report_one_atag,
+                           report_one_class=report_one_class,
+                           report_one_number=report_one_number,
+                           
+                           # Second recent report varibales
+                           report_two_title=report_two_title,
+                           report_two_atag=report_two_atag,
+                           report_two_class=report_two_class,
+                           report_two_number=report_two_number,
+                           
+                           
+                           # Third recent report varibales
+                           report_three_title=report_three_title,
+                           report_three_atag=report_three_atag,
+                           report_three_class=report_three_class,
+                           report_three_number=report_three_number,
+                           
+                           
+                           # County Dict
+                           counties=counties,
+)
+
+
+
+# Arizona State Page 
+@app.route('/arizona.html')
+def arizona():
+    value_get.clear()
+    state_selected.clear()
+    images_host.clear()
+    state_selected.append("arizona") # lower case
+    passing_variables = ["AZ", "Arizona", "arizona.png"]
+    images_host.append('arizona.png')
+    return_recent_reports_dict = getting_recent_reports(passing_variables[1])
+    counties = getting_counties(passing_variables[1])
+
+    report_one = return_recent_reports_dict['report_one']
+    report_one_title = report_one['title1']
+    report_one_atag = report_one['first_atag']
+    report_one_class = report_one['first_class']
+    report_one_number = report_one['number']
+
+    report_two = return_recent_reports_dict['report_two']
+    report_two_title = report_two['title2']
+    report_two_atag = report_two['second_atag']
+    report_two_class = report_two['second_class']
+    report_two_number = report_two['number']
+
+    report_three = return_recent_reports_dict['report_three']
+    report_three_title = report_three['title3']
+    report_three_atag = report_three['third_atag']
+    report_three_class = report_three['third_class']
+    report_three_number = report_three['number']
+
+    total_sightings = return_recent_reports_dict['total_sightings']
+    return render_template('/states/arizona.html',
+                           state_code=passing_variables[0],
+                           state=passing_variables[1],
+                           image=passing_variables[2],
+                           total_sightings=total_sightings,
+                           
+                           
+                           # First recent report varibales
+                           report_one_title=report_one_title,
+                           report_one_atag=report_one_atag,
+                           report_one_class=report_one_class,
+                           report_one_number=report_one_number,
+                           
+                           # Second recent report varibales
+                           report_two_title=report_two_title,
+                           report_two_atag=report_two_atag,
+                           report_two_class=report_two_class,
+                           report_two_number=report_two_number,
+                           
+                           
+                           # Third recent report varibales
+                           report_three_title=report_three_title,
+                           report_three_atag=report_three_atag,
+                           report_three_class=report_three_class,
+                           report_three_number=report_three_number,
+                           
+                           
+                           # County Dict
+                           counties=counties,
+)
+
+
+
+# Alaska State Page 
+@app.route('/alaska.html')
+def alaska():
+    value_get.clear()
+    state_selected.clear()
+    images_host.clear()
+    state_selected.append("alaska") # lower case
+    passing_variables = ["AK", "Alaska", "alaska.png"]
+    images_host.append('alaska.png')
+    return_recent_reports_dict = getting_recent_reports(passing_variables[1])
+    counties = getting_counties(passing_variables[1])
+
+    report_one = return_recent_reports_dict['report_one']
+    report_one_title = report_one['title1']
+    report_one_atag = report_one['first_atag']
+    report_one_class = report_one['first_class']
+    report_one_number = report_one['number']
+
+    report_two = return_recent_reports_dict['report_two']
+    report_two_title = report_two['title2']
+    report_two_atag = report_two['second_atag']
+    report_two_class = report_two['second_class']
+    report_two_number = report_two['number']
+
+    report_three = return_recent_reports_dict['report_three']
+    report_three_title = report_three['title3']
+    report_three_atag = report_three['third_atag']
+    report_three_class = report_three['third_class']
+    report_three_number = report_three['number']
+
+    total_sightings = return_recent_reports_dict['total_sightings']
+    return render_template('/states/alaska.html',
+                           state_code=passing_variables[0],
+                           state=passing_variables[1],
+                           image=passing_variables[2],
+                           total_sightings=total_sightings,
+                           
+                           
+                           # First recent report varibales
+                           report_one_title=report_one_title,
+                           report_one_atag=report_one_atag,
+                           report_one_class=report_one_class,
+                           report_one_number=report_one_number,
+                           
+                           # Second recent report varibales
+                           report_two_title=report_two_title,
+                           report_two_atag=report_two_atag,
+                           report_two_class=report_two_class,
+                           report_two_number=report_two_number,
+                           
+                           
+                           # Third recent report varibales
+                           report_three_title=report_three_title,
+                           report_three_atag=report_three_atag,
+                           report_three_class=report_three_class,
+                           report_three_number=report_three_number,
+                           
+                           
+                           # County Dict
+                           counties=counties,
+)
+
+
+
+
+# Hawaii State Page 
+@app.route('/hawaii.html')
+def hawaii():
+    value_get.clear()
+    state_selected.clear()
+    images_host.clear()
+    state_selected.append("hawaii") # lower case
+    passing_variables = ["HI", "Hawaii", "hawaii.png"]
+    images_host.append('hawaii.png')
+    return_recent_reports_dict = getting_recent_reports(passing_variables[1])
+    counties = getting_counties(passing_variables[1])
+
+    report_one = return_recent_reports_dict['report_one']
+    report_one_title = report_one['title1']
+    report_one_atag = report_one['first_atag']
+    report_one_class = report_one['first_class']
+    report_one_number = report_one['number']
+
+    report_two = return_recent_reports_dict['report_two']
+    report_two_title = report_two['title2']
+    report_two_atag = report_two['second_atag']
+    report_two_class = report_two['second_class']
+    report_two_number = report_two['number']
+
+    report_three = return_recent_reports_dict['report_three']
+    report_three_title = report_three['title3']
+    report_three_atag = report_three['third_atag']
+    report_three_class = report_three['third_class']
+    report_three_number = report_three['number']
+
+    total_sightings = return_recent_reports_dict['total_sightings']
+    return render_template('/states/hawaii.html',
+                           state_code=passing_variables[0],
+                           state=passing_variables[1],
+                           image=passing_variables[2],
+                           total_sightings=total_sightings,
+                           
+                           
+                           # First recent report varibales
+                           report_one_title=report_one_title,
+                           report_one_atag=report_one_atag,
+                           report_one_class=report_one_class,
+                           report_one_number=report_one_number,
+                           
+                           # Second recent report varibales
+                           report_two_title=report_two_title,
+                           report_two_atag=report_two_atag,
+                           report_two_class=report_two_class,
+                           report_two_number=report_two_number,
+                           
+                           
+                           # Third recent report varibales
+                           report_three_title=report_three_title,
+                           report_three_atag=report_three_atag,
+                           report_three_class=report_three_class,
+                           report_three_number=report_three_number,
+                           
+                           
+                           # County Dict
+                           counties=counties,
+)
+
+
+
+
 
 
 
